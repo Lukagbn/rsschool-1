@@ -116,6 +116,11 @@ header .container {
     position: relative;
     z-index: 1;
   }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .hero h1 {
     font-size: 72px;
     letter-spacing: 1%;
