@@ -85,6 +85,39 @@ header .container {
   max-width: 320px;
   margin: auto;
 }
+.hero-intro {
+  margin-top: 50px;
+}
+.hero-intro img {
+  display: block;
+  max-width: 100%;
+}
+.hero-intro .container {
+  max-width: 1000px;
+}
+.hero-intro .hero-intro-text-content {
+  margin-top: 30px;
+  margin-inline: 10px;
+  margin-bottom: 50px;
+}
+.hero-intro .hero-intro-text-content h2 {
+  font-size: 26px;
+  letter-spacing: 0%;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 30px;
+  color: #00a092;
+}
+.hero-intro .hero-intro-text-content p {
+  font-size: 18px;
+  letter-spacing: 0%;
+  font-weight: 400;
+  line-height: 148%;
+  color: #000000;
+}
+.hero-intro .hero-intro-text-content span {
+  display: none;
+}
 @media (min-width: 640px) {
   .container {
     max-width: 600px;
@@ -138,6 +171,32 @@ header .container {
   .hero .hero-img {
     display: none;
   }
+  .hero-intro {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .hero-intro .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-intro .intro-welcome {
+    max-width: 660px;
+    margin-right: auto;
+  }
+  .hero-intro .intro-how {
+    max-width: 660px;
+    margin-left: auto;
+  }
+  .hero-intro .hero-intro-text-content h2 {
+    font-size: 54px;
+    line-height: 65.5px;
+  }
+  .hero-intro img {
+    max-width: 660px;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
 }
 @media (min-width: 1200px) {
   .container--narrow {
@@ -188,6 +247,15 @@ header .container {
     font-size: 82px;
     line-height: 93px;
     max-width: 890px;
+  }
+  .hero-intro .hero-intro-text-content {
+    margin-inline: 0px;
+  }
+  .hero-intro img {
+    margin: 0px;
+  }
+  .hero-intro .hero-intro-text-content h2 {
+    font-size: 54px;
   }
 }
 @media (min-width: 1920px) {
