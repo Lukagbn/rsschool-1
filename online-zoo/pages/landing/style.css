@@ -83,6 +83,7 @@ header .container {
 .hero .hero-img {
   display: block;
   max-width: 320px;
+  width: 100%;
   margin: auto;
 }
 .hero-intro {
@@ -103,7 +104,7 @@ header .container {
 .hero-intro .hero-intro-text-content h2 {
   font-size: 26px;
   letter-spacing: 0%;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 29px;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -118,6 +119,66 @@ header .container {
 }
 .hero-intro .hero-intro-text-content span {
   display: none;
+}
+.donations {
+  background-color: #20113d;
+}
+.donations-text-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.donations-text-content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0%;
+  line-height: 30.6px;
+  text-transform: uppercase;
+}
+.donations-text-content h3 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 131%;
+  text-transform: uppercase;
+}
+.donations-text-content p {
+  font-size: 18px;
+  letter-spacing: 0%;
+  line-height: 150%;
+  margin-block: 30px;
+}
+.donations-text-content button {
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid #ffffff;
+  height: 45px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: transparent;
+  justify-content: right;
+  width: 100%;
+}
+.donations-text-content .btn-arrow {
+  background-color: #f58021;
+  width: 60px;
+  height: 100%;
+  justify-self: end;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 640px) {
   .container {
@@ -198,11 +259,32 @@ header .container {
     display: block;
     margin: auto;
   }
+  .donations-text-content {
+    padding-block: 50px;
+    align-items: center;
+  }
+  .donations-text-content h2 {
+    font-size: 42px;
+    line-height: 51.2px;
+  }
+  .donation-action {
+    max-width: 363px;
+    width: 100%;
+  }
+  .donations-text-content .donation-action button {
+    height: 74px;
+    font-size: 18px;
+    line-height: 21.9px;
+    width: 100%;
+    gap: 39px;
+  }
+  .donations-text-content .donation-action .btn-arrow {
+    width: 74px;
+  }
 }
 @media (min-width: 1200px) {
-  .container--narrow {
+  .container {
     max-width: 1000px;
-    transition: 0.5s ease-in-out;
   }
   .nav {
     display: flex;
@@ -241,7 +323,6 @@ header .container {
     padding-bottom: 100px;
   }
   .hero .container {
-    max-width: 1400px;
     padding-inline: 40px;
   }
   .hero h1 {
@@ -258,6 +339,34 @@ header .container {
   }
   .hero-intro .hero-intro-text-content h2 {
     font-size: 54px;
+  }
+  .donations-text-content {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .donations-text-content .donation-info {
+    max-width: 577px;
+    width: 100%;
+  }
+  .donations-text-content h2 {
+    text-align: left;
+  }
+  .donations-text-content p {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .donation-action {
+    max-width: 320px;
+    width: 100%;
+    text-align: left;
+    align-self: baseline;
+  }
+  .donations-text-content .donation-action button {
+    gap: 15px;
+  }
+  .donations-text-content .donation-action .btn-arrow {
+    width: 80px;
   }
 }
 @media (min-width: 1920px) {
@@ -302,5 +411,17 @@ header .container {
   .hero-intro .intro-how img {
     max-width: 800px;
     height: 531px;
+  }
+  .donations-text-content .donation-info {
+    max-width: 890px;
+  }
+  .donations-text-content .donation-info h2 {
+    font-size: 41px;
+  }
+  .donations-text-content .donation-info p {
+    max-width: 609px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    line-height: 145%;
   }
 }
