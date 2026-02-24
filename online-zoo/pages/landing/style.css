@@ -180,6 +180,111 @@ header .container {
   align-items: center;
   justify-content: center;
 }
+.pets {
+  margin-top: 50px;
+  margin-bottom: 64px;
+}
+.pets-info {
+  text-align: center;
+}
+.pets-info h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 31.7px;
+  color: #00a092;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.pets-info p {
+  font-size: 18px;
+  letter-spacing: 0%;
+  line-height: 145%;
+}
+.pets-card-container {
+  margin-top: 30px;
+  padding-inline: 10px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+}
+.pet-card {
+  max-width: 300px;
+  width: 100%;
+  height: 600px;
+  background-color: #20113d;
+  color: #ffffff;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.pet-card .card-header {
+  position: relative;
+}
+.pet-card .card-header img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: block;
+  width: 100%;
+}
+.pet-card .card-header p {
+  position: absolute;
+  padding-block: 12px;
+  padding-left: 30px;
+  padding-right: 22px;
+  background-color: #20113d;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 130%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 0px;
+  left: 0px;
+}
+.pet-card .card-body {
+  text-align: center;
+  padding-inline: 24px;
+}
+.pet-card .card-body h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 127%;
+  text-transform: capitalize;
+}
+.pet-card .card-body p {
+  font-size: 18px;
+  letter-spacing: 0%;
+  line-height: 150%;
+  margin-bottom: 45px;
+}
+.pet-card .card-body button {
+  display: flex;
+  max-width: 240px;
+  width: 100%;
+  align-items: center;
+  color: #f58021;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 20.27px;
+  letter-spacing: 0%;
+  line-height: 25px;
+  justify-self: center;
+  justify-content: center;
+  gap: 10px;
+  height: 73px;
+}
+.pets button {
+  display: none;
+}
+.pets .brn-container {
+  display: none;
+}
 @media (min-width: 640px) {
   .container {
     max-width: 600px;
@@ -281,6 +386,46 @@ header .container {
   .donations-text-content .donation-action .btn-arrow {
     width: 74px;
   }
+  .pets {
+    margin-block: 100px;
+  }
+  .pets-info h2 {
+    font-size: 54px;
+    line-height: 65.8px;
+    font-weight: 600;
+  }
+  .pets-info p {
+    font-size: 26px;
+    line-height: 130%;
+  }
+  .pets-card-container {
+    margin-top: 50px;
+    padding-inline: 20px;
+    gap: 20px;
+  }
+  .pet-card {
+    max-width: 290px;
+  }
+  .pets button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 50px;
+    max-width: 345px;
+    width: 100%;
+    height: 74px;
+    outline: none;
+    border: 1px solid #20113d;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 21.9px;
+    font-weight: 600;
+    letter-spacing: 0%;
+    gap: 10px;
+    color: #20113d;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -368,6 +513,34 @@ header .container {
   .donations-text-content .donation-action .btn-arrow {
     width: 80px;
   }
+  .pets {
+    margin-bottom: 150px;
+  }
+  .pet-card {
+    max-width: 445px;
+    height: 716px;
+  }
+  .pets-card-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: repeat(2, 716px);
+    grid-auto-flow: column;
+    grid-auto-columns: 445px;
+    padding-inline: 40px;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .pets .brn-container {
+    display: flex;
+    max-width: 175px;
+    width: 100%;
+    justify-content: space-between;
+    justify-self: center;
+  }
+  .pets .brn-container button {
+    max-width: 60px;
+    height: 60px;
+  }
 }
 @media (min-width: 1920px) {
   .container {
@@ -423,5 +596,16 @@ header .container {
     margin-bottom: 0;
     margin-top: 20px;
     line-height: 145%;
+  }
+  .pets-card-container {
+    margin-top: 50px;
+    padding-inline: 260px;
+    grid-template-rows: repeat(2, 747px);
+    grid-auto-columns: 440px;
+    gap: 40px;
+  }
+  .pet-card {
+    max-width: 440px;
+    height: 100%;
   }
 }
