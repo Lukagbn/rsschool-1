@@ -285,6 +285,95 @@ header .container {
 .pets .brn-container {
   display: none;
 }
+.feed {
+  background-color: #20113d;
+  color: #ffffff;
+}
+.feed h2 {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 31.7px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.hr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+  padding-top: 44px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 130%;
+  padding-bottom: 30px;
+  letter-spacing: 0%;
+}
+.feed hr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.feed-card .animal {
+  display: block;
+  width: 100%;
+}
+.feed-card .logo {
+  display: block;
+  max-width: 106px;
+  width: 100%;
+  height: 80px;
+}
+.feed-card .feed-card-body {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+}
+.feed-card .feed-card-body h3 {
+  font-size: 26px;
+  line-height: 126%;
+  font-weight: 500;
+  letter-spacing: 0%;
+}
+.feed-card .feed-card-body p {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.feed .donation {
+  width: 100px;
+}
+.feed .food {
+  width: 80px;
+}
+.feed-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f58021;
+  height: 45px;
+  max-width: 260px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.9px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 90px;
+}
+.feed .desktop {
+  display: none;
+}
 @media (min-width: 640px) {
   .container {
     max-width: 600px;
@@ -426,6 +515,38 @@ header .container {
     gap: 10px;
     color: #20113d;
   }
+  .feed h2 {
+    padding-top: 80px;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 65.8px;
+    text-align: center;
+  }
+  .hr {
+    padding-block: 50px;
+    padding-left: 0;
+  }
+  .feed-card .feed-card-body {
+    margin-top: 50px;
+  }
+  .feed .mobile {
+    display: none;
+  }
+  .feed .desktop {
+    display: block;
+  }
+  .feed .desktop p {
+    padding-inline: 0;
+  }
+  .feed-card .animal {
+    max-width: 640px;
+    margin: auto;
+  }
+  .feed-card button {
+    max-width: 290px;
+    height: 74px;
+    margin-bottom: 160px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -541,6 +662,45 @@ header .container {
     max-width: 60px;
     height: 60px;
   }
+  .feed .container {
+    max-width: 1120px;
+  }
+  .feed h2 {
+    padding-top: 150px;
+    padding-left: 60px;
+    text-align: left;
+  }
+  .hr {
+    padding-top: 100px;
+    padding-bottom: 64px;
+    gap: 63px;
+  }
+  .feed-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .feed-card .animal {
+    max-width: 550px;
+    margin: unset;
+    height: 358px;
+  }
+  .feed-card .feed-card-body {
+    margin-top: unset;
+  }
+  .feed-card button {
+    margin-bottom: 0;
+    margin-top: 88px;
+    margin-bottom: 200px;
+  }
+  .feed .container .feed-card:nth-of-type(3) {
+    align-items: flex-start;
+  }
+  .feed .container .feed-card:nth-of-type(3) .logo {
+    margin-top: 18px;
+  }
 }
 @media (min-width: 1920px) {
   .container {
@@ -607,5 +767,31 @@ header .container {
   .pet-card {
     max-width: 440px;
     height: 100%;
+  }
+  .feed .container {
+    max-width: 1400px;
+  }
+  .feed-card {
+    justify-content: space-between;
+  }
+  .feed-card .feed-card-body {
+    max-width: 560px;
+    text-align: left;
+    align-items: flex-start;
+    margin-right: 120px;
+  }
+  .feed-card-body p {
+    margin-top: 20px;
+  }
+  .feed h2 {
+    padding-left: 0;
+    padding-top: 91px;
+  }
+  .feed .container .animal {
+    max-width: 560px;
+    height: 364px;
+  }
+  .feed .container .feed-card:nth-of-type(1) {
+    align-items: flex-start;
   }
 }
