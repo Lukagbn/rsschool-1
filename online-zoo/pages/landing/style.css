@@ -591,6 +591,11 @@ header .container {
   gap: 10px;
   justify-content: center;
 }
+.touch-animal img {
+  width: 100%;
+  display: block;
+  height: 190px;
+}
 @media (min-width: 640px) {
   .container {
     max-width: 600px;
@@ -871,6 +876,9 @@ header .container {
     max-width: 359px;
     height: 74px;
     margin: auto;
+  }
+  .touch-animal img {
+    height: 380px;
   }
 }
 @media (min-width: 1200px) {
@@ -1154,6 +1162,9 @@ header .container {
   .care button {
     margin-top: 100px;
   }
+  .touch-animal img {
+    height: 668px;
+  }
 }
 @media (min-width: 1920px) {
   .container {
@@ -1295,5 +1306,8 @@ header .container {
     transform: scaleX(-1);
     height: 100%;
     width: 100%;
+  }
+  .touch-animal img {
+    height: 652px;
   }
 }
