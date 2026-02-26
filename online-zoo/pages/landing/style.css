@@ -5,9 +5,8 @@
   font-family: "Montserrat", sans-serif;
 }
 .container {
-  max-width: 300px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   transition: 0.4s ease-in-out;
 }
 header {
@@ -33,6 +32,12 @@ header .container {
   text-transform: uppercase;
   letter-spacing: 0px;
 }
+.nav .nav-list li a:hover {
+  color: #00a092;
+}
+.nav .nav-list .active {
+  color: #00a092;
+}
 .burger {
   display: flex;
   flex-direction: column;
@@ -46,6 +51,9 @@ header .container {
 .hero {
   position: relative;
   padding-top: 20px;
+}
+.hero-content {
+  margin-inline: 10px;
 }
 .hero h1 {
   color: #00a092;
@@ -85,6 +93,9 @@ header .container {
   max-width: 320px;
   width: 100%;
   margin: auto;
+  height: 291px;
+  object-fit: cover;
+  object-position: right center;
 }
 .hero-intro {
   margin-top: 50px;
@@ -130,12 +141,13 @@ header .container {
   color: #ffffff;
   padding-top: 30px;
   padding-bottom: 40px;
+  margin-inline: 10px;
 }
 .donations-text-content h2 {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0%;
-  line-height: 30.6px;
+  line-height: 31.7px;
   text-transform: uppercase;
 }
 .donations-text-content h3 {
@@ -186,6 +198,7 @@ header .container {
 }
 .pets-info {
   text-align: center;
+  margin-inline: 10px;
 }
 .pets-info h2 {
   font-size: 25px;
@@ -282,7 +295,7 @@ header .container {
 .pets button {
   display: none;
 }
-.pets .brn-container {
+.pets .btn-container {
   display: none;
 }
 .feed {
@@ -333,6 +346,10 @@ header .container {
   gap: 30px;
   align-items: center;
   text-align: center;
+  margin-inline: 10px;
+}
+.feed .feed-card:nth-of-type(1) .feed-card-body {
+  margin-inline: 20px;
 }
 .feed-card .feed-card-body h3 {
   font-size: 26px;
@@ -380,6 +397,7 @@ header .container {
 }
 .testimonials-header {
   text-align: center;
+  padding-inline: 10px;
 }
 .testimonials-header h2 {
   font-size: 26px;
@@ -390,7 +408,7 @@ header .container {
   text-transform: uppercase;
 }
 .testimonials-header p {
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: 0%;
   line-height: 145%;
   margin-bottom: 46px;
@@ -455,6 +473,7 @@ header .container {
   background-color: #ffffff;
 }
 .testimonials button {
+  max-width: 300px;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
@@ -471,6 +490,7 @@ header .container {
   justify-content: center;
   gap: 10px;
   margin-top: 50px;
+  margin-inline: 10px;
 }
 .testimonials-img {
   width: 100%;
@@ -489,6 +509,7 @@ header .container {
 .care-header {
   text-align: center;
   margin-bottom: 30px;
+  margin-inline: 10px;
 }
 .care-header h2 {
   font-size: 26px;
@@ -500,7 +521,7 @@ header .container {
   margin-bottom: 30px;
 }
 .care-header p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: 0%;
   color: #20113d;
@@ -510,6 +531,7 @@ header .container {
   gap: 10px;
   overflow-x: auto;
   margin-bottom: 30px;
+  margin-inline: 10px;
 }
 .care-cards-wrapper .koala-banner {
   display: none;
@@ -717,6 +739,7 @@ footer .top-line {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-inline: 20px;
   }
   .hero h1 {
     font-size: 72px;
@@ -751,6 +774,9 @@ footer .top-line {
     max-width: 660px;
     margin-left: auto;
   }
+  .hero-intro .hero-intro-text-content {
+    margin-inline: 20px;
+  }
   .hero-intro .hero-intro-text-content h2 {
     font-size: 54px;
     line-height: 65.5px;
@@ -759,6 +785,9 @@ footer .top-line {
     max-width: 660px;
     width: 100%;
     display: block;
+    margin: auto;
+  }
+  .donations .container {
     margin: auto;
   }
   .donations-text-content {
@@ -786,12 +815,21 @@ footer .top-line {
   .pets {
     margin-block: 100px;
   }
+  .pets .container {
+    max-width: 100%;
+  }
+  .pets-info {
+    margin-inline: 20px;
+  }
   .pets-info h2 {
+    max-width: 480px;
     font-size: 54px;
     line-height: 65.8px;
     font-weight: 600;
+    margin-inline: auto;
   }
   .pets-info p {
+    font-weight: 500;
     font-size: 26px;
     line-height: 130%;
   }
@@ -804,11 +842,13 @@ footer .top-line {
     max-width: 290px;
   }
   .pets button {
+    margin-top: 50px;
+  }
+  .pets button {
     display: flex;
     align-items: center;
     justify-content: center;
     justify-self: center;
-    margin-top: 50px;
     max-width: 345px;
     width: 100%;
     height: 74px;
@@ -823,6 +863,9 @@ footer .top-line {
     gap: 10px;
     color: #20113d;
   }
+  .feed-container.container {
+    max-width: 100%;
+  }
   .feed h2 {
     padding-top: 80px;
     font-size: 54px;
@@ -832,10 +875,11 @@ footer .top-line {
   }
   .hr {
     padding-block: 50px;
-    padding-left: 0;
+    padding-inline: 20px;
   }
   .feed-card .feed-card-body {
     margin-top: 50px;
+    margin-inline: 20px;
   }
   .feed .mobile {
     display: none;
@@ -859,6 +903,7 @@ footer .top-line {
   .testimonials-header {
     text-align: left;
     max-width: 577px;
+    padding-inline: 20px;
   }
   .testimonials-header h2 {
     font-size: 54px;
@@ -908,6 +953,7 @@ footer .top-line {
   .testimonials button {
     height: 74px;
     max-width: 368px;
+    margin-inline: 20px;
   }
   .testimonials-img {
     max-height: unset;
@@ -943,6 +989,7 @@ footer .top-line {
   .care-card .card-header {
     max-width: 300px;
     width: 100%;
+    height: 100%;
   }
   .care-card .card-header img {
     height: 100%;
@@ -957,6 +1004,7 @@ footer .top-line {
   }
   .care-cards-wrapper {
     margin-bottom: 50px;
+    margin-inline: 0;
   }
   .care button {
     max-width: 359px;
@@ -1035,9 +1083,6 @@ footer .top-line {
     font-size: 18px;
     transition: 0.3s ease-in-out;
   }
-  .nav .nav-list li a:hover {
-    color: #00a092;
-  }
   .burger {
     display: none;
   }
@@ -1048,6 +1093,9 @@ footer .top-line {
   .hero .container {
     padding-inline: 40px;
     max-width: 1200px;
+  }
+  .hero-content {
+    margin-inline: 0;
   }
   .hero h1 {
     font-size: 82px;
@@ -1068,9 +1116,10 @@ footer .top-line {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-inline: 0;
   }
   .donations-text-content .donation-info {
-    max-width: 577px;
+    max-width: 576px;
     width: 100%;
   }
   .donations-text-content h2 {
@@ -1095,6 +1144,10 @@ footer .top-line {
   .pets {
     margin-bottom: 150px;
   }
+  .pets-info {
+    max-width: 830px;
+    margin: auto;
+  }
   .pet-card {
     max-width: 445px;
     height: 716px;
@@ -1109,16 +1162,18 @@ footer .top-line {
     overflow-x: auto;
     width: 100%;
   }
-  .pets .brn-container {
+  .pets .btn-container {
+    margin-top: 100px;
     display: flex;
     max-width: 175px;
     width: 100%;
     justify-content: space-between;
     justify-self: center;
   }
-  .pets .brn-container button {
+  .pets .btn-container button {
     max-width: 60px;
     height: 60px;
+    margin: 0;
   }
   .feed .container {
     max-width: 1120px;
@@ -1132,6 +1187,7 @@ footer .top-line {
     padding-top: 100px;
     padding-bottom: 64px;
     gap: 63px;
+    padding-inline: 0;
   }
   .feed-card {
     width: 100%;
@@ -1152,6 +1208,13 @@ footer .top-line {
     margin-bottom: 0;
     margin-top: 88px;
     margin-bottom: 200px;
+    margin-right: auto;
+  }
+  .feed-card .feed-card-body {
+    margin-inline: 0;
+  }
+  .feed .feed-card:nth-of-type(1) .feed-card-body {
+    margin-inline: 0;
   }
   .feed .container .feed-card:nth-of-type(3) {
     align-items: flex-start;
@@ -1170,6 +1233,7 @@ footer .top-line {
   }
   .testimonials-header.container {
     max-width: 1120px;
+    padding: 0;
   }
   .testimonials-header p {
     max-width: 577px;
@@ -1426,6 +1490,7 @@ footer .top-line {
   }
   .testimonials-header.container {
     max-width: 577px;
+    margin-top: 0;
   }
   .testimonials-cards-wrapper {
     padding-inline: 0;
