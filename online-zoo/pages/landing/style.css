@@ -595,6 +595,92 @@ header .container {
   width: 100%;
   display: block;
   height: 190px;
+  margin-bottom: 70px;
+}
+footer {
+  height: 710px;
+  background-color: #20113d;
+}
+.footer-container {
+  max-width: 100%;
+}
+.footer-header {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer-navigation ul {
+  width: 100%;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.footer-navigation ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 20px;
+  letter-spacing: 0%;
+  font-weight: 600;
+}
+footer button {
+  margin: auto;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  outline: none;
+  border: 1px solid #ffffff;
+  height: 45px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer-body {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+footer .social-container img {
+  width: 40px;
+}
+footer .rights {
+  list-style: none;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .top-line {
+  display: none;
 }
 @media (min-width: 640px) {
   .container {
@@ -879,6 +965,44 @@ header .container {
   }
   .touch-animal img {
     height: 380px;
+  }
+  footer {
+    height: 545px;
+  }
+  .footer-container {
+    max-width: 100%;
+  }
+  .footer-header {
+    gap: 50px;
+  }
+  .footer-img-container {
+    flex-direction: row;
+  }
+  .footer-img-container {
+    gap: 80px;
+  }
+  .footer-navigation ul {
+    gap: 60px;
+  }
+  .footer-navigation ul li a {
+    line-height: 21.9px;
+  }
+  footer .bottom-line {
+    display: none;
+  }
+  footer .top-line {
+    display: block;
+    margin-block: 50px;
+  }
+  footer button {
+    font-size: 18px;
+    height: 74px;
+    max-width: 360px;
+  }
+  footer .rights {
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
   }
 }
 @media (min-width: 1200px) {
@@ -1165,6 +1289,37 @@ header .container {
   .touch-animal img {
     height: 668px;
   }
+  footer {
+    height: 329px;
+  }
+  .footer-container {
+    max-width: 100%;
+  }
+  .footer-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-img-container {
+    gap: 30px;
+  }
+  .footer-navigation ul {
+    gap: 20px;
+  }
+  footer button {
+    margin: unset;
+  }
+  footer .top-line {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+  .footer-body {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 @media (min-width: 1920px) {
   .container {
@@ -1175,6 +1330,9 @@ header .container {
   }
   .nav .nav-list {
     gap: 50px;
+  }
+  .hero {
+    background-size: 80% 100%;
   }
   .hero .container {
     padding-inline: 0px;
@@ -1309,5 +1467,21 @@ header .container {
   }
   .touch-animal img {
     height: 652px;
+    max-width: 1400px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .footer-header {
+    justify-content: space-between;
+  }
+  .footer-img-container {
+    gap: 65px;
+  }
+  .footer-navigation ul {
+    gap: 46px;
+  }
+  .footer-body {
+    max-width: 100%;
+    margin: 0;
   }
 }
