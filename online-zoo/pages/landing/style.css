@@ -727,7 +727,7 @@ header .container {
 .care button:hover svg path {
   fill: #ffffff;
 }
-.touch-animal img {
+.touch-animal-wrapper img {
   width: 100%;
   display: block;
   height: 190px;
@@ -1154,7 +1154,7 @@ footer .top-line {
     height: 74px;
     margin: auto;
   }
-  .touch-animal img {
+  .touch-animal-wrapper img {
     height: 380px;
   }
   footer {
@@ -1524,7 +1524,7 @@ footer .top-line {
   .care button {
     margin-top: 100px;
   }
-  .touch-animal img {
+  .touch-animal-wrapper img {
     height: 668px;
     margin-bottom: 150px;
   }
@@ -1711,7 +1711,7 @@ footer .top-line {
     height: 100%;
     width: 100%;
   }
-  .touch-animal img {
+  .touch-animal-wrapper img {
     height: 652px;
     max-width: 1400px;
     width: 100%;
