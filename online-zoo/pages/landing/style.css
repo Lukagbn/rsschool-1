@@ -74,11 +74,14 @@ header .container {
 }
 .burger {
   display: flex;
-  position: relative;
   flex-direction: column;
   gap: 11px;
   z-index: 2;
   cursor: pointer;
+}
+.burger.active {
+  position: fixed;
+  right: 40px;
 }
 .burger.active span {
   background: #ffffff;
