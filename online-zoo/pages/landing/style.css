@@ -286,6 +286,8 @@ header .container {
   overflow-x: scroll;
 }
 .pet-card {
+  display: flex;
+  flex-direction: column;
   max-width: 300px;
   width: 100%;
   height: 600px;
@@ -320,8 +322,13 @@ header .container {
   left: 0px;
 }
 .pet-card .card-body {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding-inline: 24px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 .pet-card .card-body h3 {
   margin-top: 15px;
@@ -336,9 +343,9 @@ header .container {
   font-size: 18px;
   letter-spacing: 0%;
   line-height: 150%;
-  margin-bottom: 45px;
 }
-.pet-card .card-body button {
+.pet-card .card-body a {
+  text-decoration: none;
   display: flex;
   max-width: 240px;
   width: 100%;
@@ -358,15 +365,15 @@ header .container {
   transition: 0.4s ease-in-out;
   border-radius: 5px;
 }
-.pet-card .card-body button svg path {
+.pet-card .card-body a svg path {
   fill: #f58021;
   transition: 0.4s ease-in-out;
 }
-.pet-card .card-body button:hover {
+.pet-card .card-body a:hover {
   color: #ffffff;
   background-color: #f58021;
 }
-.pet-card .card-body button:hover svg path {
+.pet-card .card-body a:hover svg path {
   fill: #ffffff;
 }
 .choose-fav {
@@ -1518,32 +1525,6 @@ dialog select {
     flex-direction: row;
     justify-content: center;
     gap: 48px;
-  }
-  #donation-popup {
-    max-width: 600px;
-  }
-  #donation-popup .donation-popup-header {
-    padding-block: 24px;
-  }
-  #donation-popup .donation-popup-header h2 {
-    font-size: 42px;
-    line-height: 51.2px;
-  }
-  #donation-popup .btn-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-rows: 212px;
-    row-gap: 40px;
-    column-gap: 20px;
-    max-width: 450px;
-    justify-self: center;
-    padding-inline: 0;
-  }
-  .next,
-  .btn-container button,
-  .for-special-pets {
-    max-width: 135px;
-    height: 65px;
   }
   .together {
     max-width: 600px;
