@@ -79,6 +79,12 @@ aside .aside-box img {
   width: 9px;
   height: 15px;
 }
+.aside-box .panda-lg,
+.aside-box .lemur-lg,
+.aside-box .gorilla-lg,
+.aside-box .eagle-lg {
+  display: none;
+}
 aside.active {
   max-width: 230px;
   transition: 0.4s ease-in-out;
@@ -599,6 +605,30 @@ aside .aside-box:nth-of-type(6) {
   .aside-box .lemur {
     max-width: 30px;
     height: 40px;
+  }
+  .aside-box .panda-lg,
+  .aside-box .lemur-lg,
+  .aside-box .gorilla-lg,
+  .aside-box .eagle-lg {
+    display: block;
+  }
+  .aside-box .panda,
+  .aside-box .lemur,
+  .aside-box .gorilla,
+  .aside-box .eagle {
+    display: none;
+  }
+  aside.active .aside-box .panda-lg,
+  aside.active .aside-box .lemur-lg,
+  aside.active .aside-box .gorilla-lg,
+  aside.active .aside-box .eagle-lg {
+    display: none;
+  }
+  aside.active .aside-box .panda,
+  aside.active .aside-box .lemur,
+  aside.active .aside-box .gorilla,
+  aside.active .aside-box .eagle {
+    display: block;
   }
   aside .aside-box:nth-of-type(1) {
     justify-content: end;
