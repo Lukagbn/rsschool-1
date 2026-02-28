@@ -1,6 +1,129 @@
+aside {
+  max-width: 50px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #20113d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+aside img {
+  cursor: pointer;
+}
+aside span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91px;
+  gap: 10px;
+  height: 30px;
+  background-color: #f58021;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom-right-radius: 5px;
+}
+aside p {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+}
+.aside-box {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid #ffff;
+  width: 100%;
+  justify-content: center;
+  transition: 0.4s ease-in-out;
+}
+aside .aside-box img {
+  width: 100%;
+  display: block;
+}
+.aside-box .arrow-icon {
+  max-width: 16px;
+  height: 15px;
+  transition: 0.4s ease-in-out;
+}
+.aside-box .panda {
+  max-width: 26px;
+  height: 20px;
+}
+.aside-box .eagle {
+  max-width: 21px;
+  height: 20px;
+}
+.aside-box .gorilla {
+  max-width: 22px;
+  height: 20px;
+}
+.aside-box .lemur {
+  max-width: 12px;
+  height: 20px;
+}
+.aside-box .arrow-down {
+  width: 9px;
+  height: 15px;
+}
+aside.active {
+  max-width: 230px;
+  transition: 0.4s ease-in-out;
+}
+aside.active .aside-box {
+  gap: 20px;
+}
+aside.active p {
+  max-width: 160px;
+  font-size: 14px;
+  width: initial;
+  height: initial;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #ffff;
+  opacity: 1;
+}
+aside.active .arrow-icon {
+  transform: rotate(180deg);
+}
+aside.active .aside-box:nth-of-type(1) {
+  justify-content: flex-end;
+  padding-right: 21px;
+  position: relative;
+}
+aside.active span {
+  opacity: 1;
+  transform: translateX(0);
+}
+aside .aside-box span img {
+  width: 20px;
+  height: 20px;
+}
+aside .aside-box:nth-of-type(6) {
+  border-bottom: 0;
+}
 .inner-container {
   display: flex;
   flex-direction: column;
+}
+.live-animal {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  left: 50px;
 }
 .live-animal img {
   width: 100%;
@@ -8,7 +131,6 @@
 }
 .live-animal-header img {
   height: 200px;
-  padding-left: 50px;
   border-radius: 5px;
 }
 .live-animal-header button {
@@ -27,132 +149,6 @@
   text-align: right;
   margin-right: 10px;
   line-height: 31.7px;
-}
-aside {
-  width: 50px;
-  flex-shrink: 0;
-  align-self: flex-start;
-  height: 300px;
-  background-color: #20113d;
-  position: fixed;
-  top: 110px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 10;
-  transition: 0.4s ease-in-out;
-}
-aside img {
-  cursor: pointer;
-}
-aside .aside-box:nth-of-type(1) img {
-  width: 16px;
-  height: 15px;
-}
-aside .aside-box:nth-of-type(2) img {
-  width: 26px;
-  height: 20px;
-}
-aside .aside-box:nth-of-type(3) img {
-  width: 21px;
-  height: 20px;
-}
-aside .aside-box:nth-of-type(4) img {
-  width: 22px;
-  height: 19px;
-}
-aside .aside-box:nth-of-type(5) img {
-  width: 15px;
-  height: 20px;
-}
-aside .aside-box:nth-of-type(6) img {
-  width: 9px;
-  height: 15px;
-}
-aside.active {
-  max-width: 230px;
-  width: 100%;
-  transition: 0.4s ease-in-out;
-}
-aside p {
-  opacity: 0;
-  height: 0;
-  pointer-events: none;
-  transition: 0.4s ease-in-out;
-}
-aside.active p {
-  opacity: 1;
-  height: fit-content;
-  transition: 0.4s ease-in-out;
-}
-aside .aside-box:nth-of-type(6) {
-  border-bottom: 0;
-  justify-content: center;
-}
-aside .aside-box:nth-of-type(1) {
-  position: relative;
-  justify-content: center;
-  padding-inline: 0;
-}
-aside.active .aside-box:nth-of-type(1) {
-  position: relative;
-  justify-content: right;
-  transition: 0.4s ease-in-out;
-  padding-inline: 10px;
-}
-.arrow-icon {
-  transition: 0.4s ease-in-out;
-}
-aside.active .aside-box:nth-of-type(1) .arrow-icon {
-  transform: rotate(180deg);
-  transition: 0.4s ease-in-out;
-}
-aside .aside-box:nth-of-type(1) span {
-  opacity: 0;
-  height: 0;
-  pointer-events: none;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 600;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  background-color: #f58021;
-  max-width: 91px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  border-bottom-right-radius: 5px;
-  justify-content: center;
-  gap: 10px;
-}
-aside .aside-box:nth-of-type(1) span img {
-  width: 20px;
-  height: 20px;
-}
-aside.active .aside-box:nth-of-type(1) span {
-  opacity: 1;
-  height: 30px;
-  pointer-events: all;
-}
-.aside-box {
-  width: 100%;
-  padding-inline: 10px;
-  height: 50px;
-  gap: 18px;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  color: #ffff;
-  border-bottom: 1px solid #ffff;
-}
-.aside-box p {
-  font-size: 14px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  max-width: 164px;
 }
 .camera-carousel h2 {
   font-size: 18px;
@@ -323,11 +319,41 @@ aside.active .aside-box:nth-of-type(1) span {
   aside {
     max-width: 77px;
     height: 500px;
-    width: 100%;
+  }
+  aside .aside-box {
+    height: 100px;
+  }
+  aside .aside-box:nth-of-type(1),
+  aside .aside-box:nth-of-type(6) {
+    height: 50px;
+  }
+  .aside-box .panda {
+    max-width: 40px;
+    height: 30px;
+  }
+  .aside-box .eagle {
+    max-width: 32px;
+    height: 30px;
+  }
+  .aside-box .gorilla {
+    max-width: 34px;
+    height: 30px;
+  }
+  .aside-box .lemur {
+    max-width: 18px;
+    height: 30px;
+  }
+  aside.active {
+    max-width: 233px;
+  }
+  aside.active p {
+    max-width: 157px;
   }
   .inner-container {
     padding-right: 20px;
-    padding-left: 77px;
+  }
+  .live-animal {
+    left: 77px;
   }
   .live-animal-header img {
     width: 100%;
@@ -339,11 +365,12 @@ aside.active .aside-box:nth-of-type(1) span {
     text-align: center;
     margin-block: 26px;
   }
-  .live-animal-header button {
+  .live-animal-header button.views {
     max-width: 212px;
     display: flex;
     justify-self: end;
-    margin-block: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
   .carousel {
     max-width: 445px;
@@ -353,7 +380,7 @@ aside.active .aside-box:nth-of-type(1) span {
     overflow-x: hidden;
   }
   .camera-carousel {
-    margin-bottom: 80px;
+    margin-block: 80px;
   }
   .carousel-item {
     max-width: 136px;
@@ -410,9 +437,48 @@ aside.active .aside-box:nth-of-type(1) span {
     max-width: 115px;
     height: 846px;
   }
+  aside.active {
+    max-width: 300px;
+  }
+  .aside-box .panda {
+    max-width: 53px;
+    height: 40px;
+  }
+  .aside-box .eagle {
+    max-width: 42px;
+    height: 40px;
+  }
+  .aside-box .gorilla {
+    max-width: 45px;
+    height: 40px;
+  }
+  .aside-box .lemur {
+    max-width: 24px;
+    height: 40px;
+  }
+  aside .aside-box {
+    height: 172px;
+  }
+  aside .aside-box:nth-of-type(1),
+  aside .aside-box:nth-of-type(6) {
+    height: 80px;
+  }
+  aside.active p {
+    font-size: 18px;
+  }
+  aside.active .aside-box {
+    gap: 34px;
+  }
+  aside.active span {
+    max-width: 144px;
+    width: 100%;
+    height: 38px;
+  }
+  .live-animal {
+    left: 135px;
+  }
   .inner-container {
     padding-right: 40px;
-    padding-left: 135px;
   }
   .live-animal-header-wrapper button {
     margin: 0;
@@ -433,14 +499,19 @@ aside.active .aside-box:nth-of-type(1) span {
   .live-animal-header img {
     height: 760px;
   }
-  .donate-now.views {
+  .live-animal-header button.views {
     display: none;
+  }
+  .live-animal-header-wrapper button {
+    display: flex;
   }
   .camera-carousel h2 {
     font-size: 42px;
     line-height: 51.2px;
-    margin-top: 10px;
     margin-bottom: 30px;
+  }
+  .camera-carousel {
+    margin-top: 50px;
   }
   .carousel {
     max-width: 1000px;
@@ -524,6 +595,44 @@ aside.active .aside-box:nth-of-type(1) span {
   aside {
     max-width: 220px;
   }
+  aside.active {
+    max-width: 300px;
+  }
+  .aside-box .panda {
+    max-width: 66px;
+    height: 50px;
+  }
+  .aside-box .eagle {
+    max-width: 53px;
+    height: 50px;
+  }
+  .aside-box .gorilla {
+    max-width: 56px;
+    height: 50px;
+  }
+  .aside-box .lemur {
+    max-width: 30px;
+    height: 40px;
+  }
+  aside .aside-box:nth-of-type(1) {
+    justify-content: end;
+    padding-right: 21px;
+  }
+  aside.active span {
+    max-width: 120px;
+    transform: translateX(0%);
+    height: 38px;
+    opacity: 1;
+  }
+  aside span {
+    max-width: 120px;
+    width: 100%;
+    height: 38px;
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+    transform: translateX(0%);
+    display: flex;
+  }
   .live-animal-header-wrapper {
     margin-block: 50px;
     gap: 200px;
@@ -541,7 +650,7 @@ aside.active .aside-box:nth-of-type(1) span {
     padding-inline: 0;
   }
   .camera-carousel {
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
   }
   .carousel {
