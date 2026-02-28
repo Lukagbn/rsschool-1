@@ -1,0 +1,576 @@
+.inner-container {
+  display: flex;
+  flex-direction: column;
+}
+.live-animal img {
+  width: 100%;
+  display: block;
+}
+.live-animal-header img {
+  height: 200px;
+  padding-left: 50px;
+  border-radius: 5px;
+}
+.live-animal-header button {
+  display: none;
+}
+.live-animal-header-wrapper button {
+  display: none;
+}
+.live-animal-header h1 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #00a092;
+  margin-block: 20px;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 31.7px;
+}
+aside {
+  width: 50px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  height: 300px;
+  background-color: #20113d;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10;
+  transition: 0.4s ease-in-out;
+}
+aside img {
+  cursor: pointer;
+}
+aside .aside-box:nth-of-type(1) img {
+  width: 16px;
+  height: 15px;
+}
+aside .aside-box:nth-of-type(2) img {
+  width: 26px;
+  height: 20px;
+}
+aside .aside-box:nth-of-type(3) img {
+  width: 21px;
+  height: 20px;
+}
+aside .aside-box:nth-of-type(4) img {
+  width: 22px;
+  height: 19px;
+}
+aside .aside-box:nth-of-type(5) img {
+  width: 15px;
+  height: 20px;
+}
+aside .aside-box:nth-of-type(6) img {
+  width: 9px;
+  height: 15px;
+}
+aside.active {
+  max-width: 230px;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+aside p {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+}
+aside.active p {
+  opacity: 1;
+  height: fit-content;
+  transition: 0.4s ease-in-out;
+}
+aside .aside-box:nth-of-type(6) {
+  border-bottom: 0;
+  justify-content: center;
+}
+aside .aside-box:nth-of-type(1) {
+  position: relative;
+  justify-content: center;
+  padding-inline: 0;
+}
+aside.active .aside-box:nth-of-type(1) {
+  position: relative;
+  justify-content: right;
+  transition: 0.4s ease-in-out;
+  padding-inline: 10px;
+}
+.arrow-icon {
+  transition: 0.4s ease-in-out;
+}
+aside.active .aside-box:nth-of-type(1) .arrow-icon {
+  transform: rotate(180deg);
+  transition: 0.4s ease-in-out;
+}
+aside .aside-box:nth-of-type(1) span {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: #f58021;
+  max-width: 91px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: 5px;
+  justify-content: center;
+  gap: 10px;
+}
+aside .aside-box:nth-of-type(1) span img {
+  width: 20px;
+  height: 20px;
+}
+aside.active .aside-box:nth-of-type(1) span {
+  opacity: 1;
+  height: 30px;
+  pointer-events: all;
+}
+.aside-box {
+  width: 100%;
+  padding-inline: 10px;
+  height: 50px;
+  gap: 18px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  border-bottom: 1px solid #ffff;
+}
+.aside-box p {
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  max-width: 164px;
+}
+.camera-carousel h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.9px;
+  margin-block: 20px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.carousel-item {
+  max-width: 140px;
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.carousel-item > img {
+  height: 110px;
+}
+.camera-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 74px;
+  height: 23px;
+  border: 1px solid #ffff;
+  border-left: 0px;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  gap: 5px;
+}
+.camera-container span {
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 10.6px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.carousel-inner {
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+}
+.camera-carousel .carousel-item > img {
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+}
+.carousel {
+  display: flex;
+  gap: 20px;
+  padding-left: 10px;
+}
+.carousel button {
+  display: none;
+}
+.donate-now {
+  max-width: 300px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: #f58021;
+  color: #ffff;
+  text-transform: uppercase;
+  gap: 10px;
+  outline: none;
+  border: none;
+  height: 45px;
+  border-radius: 5px;
+  margin-block: 50px;
+}
+.did-you-know {
+  margin-block: 50px;
+  margin-inline: 10px;
+  box-shadow: 0px 4px 50px 0px #0000007c;
+  border-radius: 5px;
+  text-align: center;
+  padding-inline: 10px;
+  padding-bottom: 50px;
+}
+.did-you-know h2 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  line-height: 31.7px;
+  text-transform: uppercase;
+  color: #00a092;
+  padding-block: 30px;
+}
+.did-you-know p {
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.animal-bio img {
+  width: 100%;
+  display: block;
+}
+.animal-bio-text {
+  margin-top: 50px;
+  margin-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.animal-bio-text h3 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+.animal-bio-text p {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.view-map.top {
+  display: none;
+  margin-block: 0;
+}
+.view-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: transparent;
+  color: #f58021;
+  text-transform: uppercase;
+  gap: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-block: 50px;
+  font-size: 20.27px;
+  line-height: 20px;
+  max-width: 240px;
+  width: 100%;
+  height: 74px;
+  transition: 0.4s ease-in-out;
+}
+.view-map:hover {
+  background-color: #f58021;
+  color: #ffff;
+}
+.view-map:hover svg path {
+  fill: #ffff;
+}
+.view-map svg path {
+  fill: #f58021;
+  width: 27px;
+  height: 24px;
+  transition: 0.4s ease-in-out;
+}
+.animal-bio-intro {
+  margin-inline: 15px;
+  margin-bottom: 80px;
+}
+.animal-bio-intro p {
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+@media (min-width: 640px) {
+  aside {
+    max-width: 77px;
+    height: 500px;
+    width: 100%;
+  }
+  .inner-container {
+    padding-right: 20px;
+    padding-left: 77px;
+  }
+  .live-animal-header img {
+    width: 100%;
+    height: 402px;
+    padding-left: 0;
+  }
+  .live-animal-header h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-block: 26px;
+  }
+  .live-animal-header button {
+    max-width: 212px;
+    display: flex;
+    justify-self: end;
+    margin-block: 20px;
+  }
+  .carousel {
+    max-width: 445px;
+    margin-inline: auto;
+    padding: 0;
+    margin-right: 20px;
+    overflow-x: hidden;
+  }
+  .camera-carousel {
+    margin-bottom: 80px;
+  }
+  .carousel-item {
+    max-width: 136px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .carousel-item > img {
+    height: 106px;
+  }
+  .camera-carousel h2 {
+    font-size: 26px;
+    line-height: 130%;
+    font-weight: 500;
+  }
+  .donate-now {
+    display: none;
+  }
+  .did-you-know {
+    margin-inline: 20px;
+    padding-inline: 30px;
+  }
+  .did-you-know h2 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 51.2px;
+  }
+  .did-you-know p {
+    font-size: 26px;
+  }
+  .animal-bio img {
+    padding-inline: 20px;
+  }
+  .animal-bio-text {
+    margin-inline: 20px;
+  }
+  .text-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .view-map.bottom {
+    display: none;
+  }
+  .view-map.top {
+    display: flex;
+  }
+  .animal-bio-intro {
+    font-size: 18px;
+    margin-inline: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  aside {
+    max-width: 115px;
+    height: 846px;
+  }
+  .inner-container {
+    padding-right: 40px;
+    padding-left: 135px;
+  }
+  .live-animal-header-wrapper button {
+    margin: 0;
+    height: 56px;
+  }
+  .live-animal-header-wrapper {
+    margin-block: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 71px;
+  }
+  .live-animal-header h1 {
+    font-size: 54px;
+    line-height: 65.8px;
+    margin: 0;
+  }
+  .live-animal-header img {
+    height: 760px;
+  }
+  .donate-now.views {
+    display: none;
+  }
+  .camera-carousel h2 {
+    font-size: 42px;
+    line-height: 51.2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .carousel {
+    max-width: 1000px;
+    align-items: center;
+    margin-inline: auto;
+    padding-left: 55px;
+  }
+  .carousel-item > img {
+    height: 209px;
+  }
+  .carousel-item {
+    max-width: 265px;
+    flex-shrink: 0;
+  }
+  .carousel-inner {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    max-width: 835px;
+    width: 100%;
+  }
+  .carousel button {
+    padding: 9px;
+    outline: none;
+    background-color: transparent;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .carousel button svg path {
+    max-width: 40px;
+    height: 40px;
+    fill: #20113d;
+  }
+  .donations .container {
+    max-width: 1120px;
+  }
+  .donations-text-content .donation-info {
+    max-width: 740px;
+  }
+  .donations-text-content p {
+    font-size: 21px;
+  }
+  .did-you-know {
+    margin-top: 100px;
+    margin-bottom: 130px;
+    max-width: 930px;
+    margin-inline: auto;
+    padding-bottom: 30px;
+    padding-inline: 95px;
+  }
+  .animal-bio {
+    max-width: 1120px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .animal-bio img {
+    max-width: 445px;
+    height: 455px;
+    padding-inline: 0;
+  }
+  .animal-bio-text {
+    margin: 0;
+    max-width: 500px;
+    width: 100%;
+  }
+  .view-map.top {
+    max-width: 240px;
+  }
+  .animal-bio-intro {
+    max-width: 1120px;
+    margin-top: 50px;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1920px) {
+  aside {
+    max-width: 220px;
+  }
+  .live-animal-header-wrapper {
+    margin-block: 50px;
+    gap: 200px;
+  }
+  .live-animal-header-wrapper button {
+    height: 74px;
+    max-width: 240px;
+  }
+  .live-animal-header h1 {
+    font-weight: 600;
+  }
+  .inner-container {
+    max-width: 1400px;
+    margin: auto;
+    padding-inline: 0;
+  }
+  .camera-carousel {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .carousel {
+    max-width: 1226px;
+  }
+  .carousel-inner {
+    max-width: 1040px;
+  }
+  .carousel-item {
+    max-width: 320px;
+  }
+  .donations .container {
+    max-width: 1400px;
+  }
+  .donations-text-content .donation-info {
+    max-width: 873px;
+  }
+  .donations-text-content .donation-info p {
+    max-width: 100%;
+  }
+  .did-you-know {
+    margin-top: 150px;
+    max-width: 1040px;
+  }
+  .animal-bio {
+    max-width: 1400px;
+  }
+  .animal-bio-intro {
+    max-width: 1400px;
+    margin-bottom: 150px;
+  }
+}
