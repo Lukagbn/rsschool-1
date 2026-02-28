@@ -1,27 +1,38 @@
 const burger = document.querySelector(".burger");
 const navList = document.querySelector(".nav-list");
-
+const togetherCare = document.getElementById("together");
+const donateVolunteers = document.querySelector(".donate-volunteers");
+const cross = document.querySelector(".cross");
 const body = document.querySelector("body");
-const donationPopUp = document.getElementById("donation-popup");
-
-const forSpecialPetsBtn = document.querySelector(".for-special-pets");
-const btnContainer = donationPopUp.querySelectorAll(".btn-container button");
-
-const input = document.querySelector(".btn-container input");
-const donateNow = document.querySelector(".feed-card button");
-const btnWrapper = document.querySelectorAll(".btn-wrapper");
-
-const progressionDot = document.querySelectorAll(".progression-dots .dot");
-const progressionStep = document.querySelectorAll(".steps .step");
-const popUpHeaders = document.querySelectorAll(".donation-popup-info h3");
-const chooseDonationTitle = document.querySelector(".choose-donation-title");
-
-let activeIndex = 0;
 
 burger.addEventListener("click", () => {
   navList.classList.toggle("active");
   burger.classList.toggle("active");
 });
+donateVolunteers.addEventListener("click", () => {
+  body.classList.add("overflow-hidden");
+  togetherCare.showModal();
+});
+cross.addEventListener("click", (e) => {
+  body.classList.remove("overflow-hidden");
+  togetherCare.close();
+});
+// const donationPopUp = document.getElementById("donation-popup");
+
+// const forSpecialPetsBtn = document.querySelector(".for-special-pets");
+// const btnContainer = donationPopUp.querySelectorAll(".btn-container button");
+
+// const input = document.querySelector(".btn-container input");
+// const donateNow = document.querySelector(".feed-card button");
+// const btnWrapper = document.querySelectorAll(".btn-wrapper");
+
+// const progressionDot = document.querySelectorAll(".progression-dots .dot");
+// const progressionStep = document.querySelectorAll(".steps .step");
+// const popUpHeaders = document.querySelectorAll(".donation-popup-info h3");
+// const chooseDonationTitle = document.querySelector(".choose-donation-title");
+
+// let activeIndex = 0;
+
 // btnContainer.forEach((e) => {
 //   input.classList.add("active");
 //   e.addEventListener("click", () => {
@@ -80,4 +91,3 @@ burger.addEventListener("click", () => {
 //   donationPopUp.showModal();
 //   body.classList.add("overflow-none");
 // });
-console.log("here", activeIndex);

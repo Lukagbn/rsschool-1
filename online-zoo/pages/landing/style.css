@@ -81,7 +81,7 @@ header .container {
 }
 .burger.active {
   position: fixed;
-  right: 40px;
+  right: 10px;
 }
 .burger.active span {
   background: #ffffff;
@@ -123,7 +123,7 @@ header .container {
   letter-spacing: 0%;
   line-height: 150%;
 }
-.hero button {
+.view-live {
   background-color: #f58021;
   width: 100%;
   height: 45px;
@@ -141,8 +141,9 @@ header .container {
   border-radius: 5px;
   margin-top: 30px;
   transition: 0.4s ease-in-out;
+  text-decoration: none;
 }
-.hero button:hover {
+.view-live:hover {
   background-color: #d26004;
 }
 .hero .hero-img {
@@ -829,6 +830,84 @@ footer .rights {
 footer .top-line {
   display: none;
 }
+.together {
+  top: 50%;
+  max-width: 300px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+.together::backdrop {
+  background-color: #000000;
+  opacity: 0.6;
+}
+.together img {
+  display: block;
+  width: 100%;
+}
+.img-container {
+  position: relative;
+}
+.img-container img {
+  height: 200px;
+}
+.img-container .cross {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #ffffff;
+  scale: 2.5;
+  font-weight: 500;
+  cursor: pointer;
+}
+.together .text-container {
+  padding-top: 20px;
+  padding-inline: 20px;
+  text-align: center;
+}
+.together .text-container h2 {
+  text-transform: uppercase;
+  color: #f58021;
+  font-size: 30px;
+  line-height: 130%;
+  font-weight: 500;
+  letter-spacing: 0%;
+}
+.together .text-container p {
+  padding-block: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.together .btn-container {
+  display: grid;
+  max-width: 300px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 20px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+.together .btn-container button {
+  max-width: 135px;
+  width: 100%;
+  border: none;
+  height: 45px;
+  background-color: #00a092;
+  opacity: 0.5;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.9px;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+}
+.together .btn-container button:hover {
+  opacity: 1;
+}
+body.overflow-hidden {
+  overflow: hidden;
+}
 /* pop up make donation */
 /* #donation-popup {
   position: fixed;
@@ -1069,6 +1148,9 @@ dialog select {
   overflow: hidden;
 } */
 @media (min-width: 640px) {
+  .burger.active {
+    right: 40px;
+  }
   .container {
     max-width: 600px;
   }
@@ -1120,7 +1202,7 @@ dialog select {
     max-width: 339px;
     line-height: 141%;
   }
-  .hero button {
+  .view-live {
     text-align: left;
     height: 74px;
     max-width: 285px;
@@ -1463,6 +1545,28 @@ dialog select {
     max-width: 135px;
     height: 65px;
   }
+  .together {
+    max-width: 600px;
+  }
+  .img-container img {
+    height: 167px;
+  }
+  .together .text-container {
+    padding-inline: 60px;
+  }
+  .together .text-container h2 {
+    font-size: 42px;
+    line-height: 51.2px;
+  }
+  .together .btn-container {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 20px;
+    max-width: 445px;
+  }
+  .together .btn-container button {
+    height: 65px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -1535,6 +1639,9 @@ dialog select {
   }
   .hero-intro .hero-intro-text-content h2 {
     font-size: 54px;
+  }
+  .view-live {
+    max-width: 240px;
   }
   .donations-text-content {
     flex-direction: row;
@@ -1827,6 +1934,34 @@ dialog select {
     max-width: 1200px;
     margin: auto;
     padding-inline: 40px;
+  }
+  .together {
+    max-width: 1121px;
+  }
+  .img-container img {
+    height: 312px;
+  }
+  .together .text-container {
+    padding-top: 30px;
+  }
+  .together .text-container h2 {
+    font-size: 54px;
+    font-weight: 600;
+    max-width: 680px;
+    margin: auto;
+  }
+  .together .text-container p {
+    max-width: 570px;
+    padding-bottom: 30px;
+    margin: auto;
+  }
+  .together .btn-container {
+    max-width: 100%;
+    display: flex;
+    gap: 40px;
+  }
+  .together .btn-container button {
+    max-width: 120px;
   }
 }
 @media (min-width: 1920px) {

@@ -6,6 +6,7 @@
     <title>Online Zoo</title>
     <link rel="stylesheet" href="../landing/style.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="../landing/app.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -17,7 +18,7 @@
           /></a>
           <nav class="nav">
             <ul class="nav-list">
-              <li><a href="#">about</a></li>
+              <li><a href="../landing/index.html">about</a></li>
               <li><a href="#">map</a></li>
               <li><a href="#" class="active">zoos</a></li>
               <li><a href="#">contact us</a></li>
@@ -93,7 +94,7 @@
           <div class="live-animal-header">
             <div class="live-animal-header-wrapper">
               <h1>live panda cams</h1>
-              <button class="donate-now">
+              <button class="view-live">
                 donate now
                 <svg
                   width="25"
@@ -112,7 +113,7 @@
               </button>
             </div>
             <img src="../../assets/images/pandayoutube.png" alt="live panda" />
-            <button class="donate-now views">
+            <button class="view-live bottom">
               donate now
               <svg
                 width="25"
@@ -199,7 +200,7 @@
           </button>
         </div>
       </section>
-      <button class="donate-now">
+      <button class="view-live small">
         donate now
         <svg
           width="25"
@@ -335,6 +336,31 @@
           successful conservation programs.
         </p>
       </div>
+      <dialog id="together" class="together">
+        <div class="img-container">
+          <img
+            src="../../assets/images/careandprotect.png"
+            alt="care and protect"
+          />
+          <span class="cross">X</span>
+        </div>
+        <div class="text-container">
+          <h2>together we care, save and protect!</h2>
+          <p>
+            Your most generous gift not only cares for countless animals, but it
+            also offers hope and a vital lifeline to the world’s most endangered
+            wildlife relying on us to survive.
+          </p>
+        </div>
+        <div class="btn-container">
+          <button>$20</button>
+          <button>$30</button>
+          <button>$50</button>
+          <button>$80</button>
+          <button>$100</button>
+          <button>other</button>
+        </div>
+      </dialog>
       <footer>
         <div class="footer-container container">
           <div class="footer-header">
@@ -389,7 +415,7 @@
                 <li><a href="#">contact us</a></li>
               </ul>
             </nav>
-            <button type="button">
+            <button type="button" class="donate-volunteers">
               Donate for volunteers
               <svg
                 width="25"

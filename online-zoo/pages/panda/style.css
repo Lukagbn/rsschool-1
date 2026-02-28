@@ -205,24 +205,10 @@ aside .aside-box:nth-of-type(6) {
 .carousel button {
   display: none;
 }
-.donate-now {
+.small {
   max-width: 300px;
-  font-size: 18px;
-  font-weight: 600;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  background-color: #f58021;
-  color: #ffff;
-  text-transform: uppercase;
-  gap: 10px;
-  outline: none;
-  border: none;
-  height: 45px;
-  border-radius: 5px;
-  margin-block: 50px;
+  margin-inline: auto;
+  margin-bottom: 50px;
 }
 .did-you-know {
   margin-block: 50px;
@@ -365,12 +351,12 @@ aside .aside-box:nth-of-type(6) {
     text-align: center;
     margin-block: 26px;
   }
-  .live-animal-header button.views {
+  .live-animal-header button.bottom {
     max-width: 212px;
     display: flex;
     justify-self: end;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-block: 20px;
+    height: 48px;
   }
   .carousel {
     max-width: 445px;
@@ -395,7 +381,7 @@ aside .aside-box:nth-of-type(6) {
     line-height: 130%;
     font-weight: 500;
   }
-  .donate-now {
+  .small {
     display: none;
   }
   .did-you-know {
@@ -499,7 +485,7 @@ aside .aside-box:nth-of-type(6) {
   .live-animal-header img {
     height: 760px;
   }
-  .live-animal-header button.views {
+  .live-animal-header button.bottom {
     display: none;
   }
   .live-animal-header-wrapper button {
