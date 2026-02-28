@@ -633,6 +633,10 @@ aside .aside-box:nth-of-type(6) {
     transform: translateX(0%);
     display: flex;
   }
+  .live-animal {
+    left: 260px;
+    right: 260px;
+  }
   .live-animal-header-wrapper {
     margin-block: 50px;
     gap: 200px;
