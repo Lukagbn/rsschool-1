@@ -12,6 +12,8 @@ A fully responsive multi-page website for an online zoo, where users can watch l
 
 ### 🏠 Landing Page
 
+<img width="1920" height="1080" alt="landing" src="https://github.com/user-attachments/assets/9298c66e-8ae5-4ee1-ba9d-5dd3fbbfc961" />
+
 - Hero section with live cam link
 - Animal intro & how-we-work sections
 - Quick donate button
@@ -21,18 +23,26 @@ A fully responsive multi-page website for an online zoo, where users can watch l
 
 ### 🗺️ Interactive Map
 
+<img width="1920" height="1080" alt="map" src="https://github.com/user-attachments/assets/f35ca08e-34cd-425a-8488-8eaedad2078d" />
+
 - SVG-based world map
 - Animal location markers (eagle, alligator, lion, gorilla, panda, lemur, tiger, koala)
 
 ### 🦒 Zoos Page
 
 - Live webcam embeds for each animal
+- 
+<img width="1920" height="1080" alt="zoos" src="https://github.com/user-attachments/assets/d5b9ed98-fb61-4428-a93a-96d9780fb5ad" />
 
 ### 📬 Contact Page
 
 - Contact form
 
+<img width="1920" height="1080" alt="getintouch" src="https://github.com/user-attachments/assets/cbf0d92e-bd75-47b7-87e8-deab5a139412" />
+
 ### 💛 Donation Popup
+
+<img width="1920" height="1080" alt="donation" src="https://github.com/user-attachments/assets/e1a83c6f-fcba-49ed-a3ad-93f245e5d5da" />
 
 - 3-step donation flow: amount → billing → payment
 - Stepper navigation with dots
@@ -40,6 +50,8 @@ A fully responsive multi-page website for an online zoo, where users can watch l
 - Monthly recurring gift option
 
 ### 🐾 Volunteer Donation Dialog
+
+<img width="1920" height="1080" alt="donation2" src="https://github.com/user-attachments/assets/c9f183f9-5bd1-41fa-8431-dba1d4c6f3c1" />
 
 - Triggered from multiple buttons across all pages
 - Shared across landing, map, contact, and zoos pages
