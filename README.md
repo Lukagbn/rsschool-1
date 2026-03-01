@@ -4,7 +4,7 @@ A fully responsive multi-page website for an online zoo, where users can watch l
 
 ## 🌐 Live Demo
 
-> [_Add your GitHub Pages link here_](https://lukagbn.github.io/rsschool-1/online-zoo/pages/landing/index.html)
+> [_online zoo](https://lukagbn.github.io/rsschool-1/online-zoo/pages/landing/index.html)
 
 ---
 
