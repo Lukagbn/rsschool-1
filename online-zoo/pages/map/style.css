@@ -1,0 +1,111 @@
+.map-container {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.map-container h1 {
+  line-height: 130%;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #20113d;
+  font-weight: 500;
+  margin-inline: 10px;
+}
+.map svg {
+  transition: transform 0.3s ease;
+}
+.map svg:hover {
+  transform: scale(1.1);
+}
+.map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1400 / 700;
+  background-image: url("../../assets/images/Map.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.map svg {
+  display: block;
+  position: absolute;
+  width: 12%;
+  height: auto;
+  cursor: pointer;
+  overflow: visible;
+}
+.eagle {
+  bottom: 30%;
+  left: 16%;
+  filter: drop-shadow(0px 1.3px 30px #f58021);
+}
+.aligator {
+  bottom: 30%;
+  left: 25%;
+}
+.lion {
+  bottom: 28%;
+  left: 41%;
+}
+.gorilla {
+  bottom: 21%;
+  left: 47%;
+}
+.lemur {
+  bottom: 10%;
+  left: 52%;
+}
+.panda {
+  right: 28%;
+  bottom: 40%;
+}
+.tiger {
+  right: 23%;
+  bottom: 20%;
+}
+.koala {
+  right: 17%;
+  bottom: 6%;
+}
+.map svg.active path .fill {
+  fill: #ffff;
+}
+.map svg g > path:first-child {
+  fill: #f58021;
+  transition: fill 0.3s ease;
+}
+.map svg.active g > path:first-child {
+  fill: #ffffff;
+}
+@media (min-width: 640px) {
+  .map-container h1 {
+    font-size: 44px;
+    max-width: 500px;
+    margin-inline: auto;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+  }
+  .map-container {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .map-container h1 {
+    font-size: 54px;
+    max-width: 590px;
+    padding-bottom: 30px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1920px) {
+  .map-container h1 {
+    padding-bottom: 70px;
+  }
+  .map-container {
+    padding-top: 40px;
+    padding-bottom: 150px;
+  }
+}

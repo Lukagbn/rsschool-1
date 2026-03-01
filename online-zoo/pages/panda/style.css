@@ -266,6 +266,7 @@ aside .aside-box:nth-of-type(6) {
   margin-block: 0;
 }
 .view-map {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
