@@ -170,6 +170,15 @@ aside .aside-box:nth-of-type(6) {
   width: 100%;
   position: relative;
   flex-shrink: 0;
+  cursor: pointer;
+}
+.carousel-item:hover > img {
+  border: 3px solid #f58021;
+  border-radius: 5px;
+}
+.carousel-item.active > img {
+  border: 3px solid #f58021;
+  border-radius: 5px;
 }
 .carousel-item > img {
   height: 110px;
@@ -185,6 +194,7 @@ aside .aside-box:nth-of-type(6) {
   justify-content: center;
   border-bottom-right-radius: 5px;
   gap: 5px;
+  border-top: 0px;
 }
 .camera-container span {
   color: #ffff;
@@ -192,6 +202,10 @@ aside .aside-box:nth-of-type(6) {
   font-size: 10.6px;
   line-height: 150%;
   letter-spacing: 0%;
+}
+.carousel-item.active .camera-container {
+  top: 3px;
+  left: 3px;
 }
 .carousel-inner {
   overflow-x: scroll;
@@ -497,6 +511,18 @@ aside .aside-box:nth-of-type(6) {
   }
   .live-animal-header-wrapper button {
     display: flex;
+  }
+  .camera-container {
+    width: 189px;
+    height: 44px;
+    gap: 5px;
+  }
+  .camera-container span {
+    font-size: 26px;
+  }
+  .camera-container img {
+    width: 20px;
+    height: 20px;
   }
   .camera-carousel h2 {
     font-size: 42px;
