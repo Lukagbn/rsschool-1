@@ -535,11 +535,20 @@ aside .aside-box:nth-of-type(6) {
     justify-content: center;
     align-items: center;
     border: none;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
   }
   .carousel button svg path {
     max-width: 40px;
     height: 40px;
     fill: #20113d;
+    transition: 0.4s ease-in-out;
+  }
+  .carousel button:hover {
+    background-color: #20113d;
+  }
+  .carousel button:hover svg path {
+    fill: #ffff;
   }
   .donations .container {
     max-width: 1120px;
