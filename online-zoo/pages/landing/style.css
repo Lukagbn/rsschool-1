@@ -926,245 +926,263 @@ footer .top-line {
 body.overflow-hidden {
   overflow: hidden;
 }
-/* pop up make donation */
-/* #donation-popup {
-  position: fixed;
+.donate-popup {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: none;
-  outline: none;
   max-width: 300px;
   width: 100%;
+  border: none;
   text-align: center;
 }
-#donation-popup::backdrop {
+.donate-popup::backdrop {
   background-color: #000000;
-  opacity: 0.7;
+  opacity: 0.6;
 }
-#donation-popup .donation-popup-header {
+.popup-header {
   background-color: #f58021;
-  text-align: center;
-  padding-block: 30px;
-}
-#donation-popup .donation-popup-header h2 {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 32.7px;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-#donation-popup .donation-popup-info {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  padding-inline: 43px;
-}
-.choose-donation-title {
-  text-align: center;
-  padding-inline: 30px;
-  padding-bottom: 10px;
-}
-#donation-popup hr {
-  margin-bottom: 30px;
-}
-.choose-donation-title:before {
-  content: "* ";
-  color: #00a092;
-}
-#donation-popup .donation-popup-info h3 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 150%;
-  letter-spacing: 0%;
-  text-transform: capitalize;
-}
-.d-none {
-  display: none;
-}
-#donation-popup .btn-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-inline: 11px;
-  gap: 20px;
-  padding-bottom: 30px;
-}
-.btn-wrapper {
+  height: 117px;
+  margin-block: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-#donation-popup .for-special-pets.active {
-  display: unset;
-  background-color: #00a092;
-}
-.next,
-.btn-container button,
-.for-special-pets {
-  background-color: #00a092;
-  opacity: 0.5;
-  max-width: 130px;
-  width: 100%;
-  outline: none;
-  border: none;
-  height: 50px;
-  border-radius: 5px;
-  transition: 0.4s ease-in-out;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 21.9px;
-  letter-spacing: 0%;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-.back {
-  display: none;
-  outline: none;
-  border: none;
-  color: #00a092;
-  background-color: transparent;
-  font-size: 18px;
-  text-transform: capitalize;
-  font-weight: 600;
-  line-height: 150%;
-  margin-block: 20px;
-  text-decoration: underline;
-  margin-inline: auto;
-}
-.for-special-pets {
-  max-width: 210px;
-  text-transform: uppercase;
-}
-.for-special-pets.active {
-  opacity: 1;
-}
-#donation-popup .btn-container button:hover {
-  opacity: 1;
-}
-#donation-popup .btn-container button.active {
-  opacity: 1;
-}
-#donation-popup .btn-container input {
-  max-width: 130px;
-  width: 100%;
-  height: 50px;
-  outline: 0;
-  border: 1px solid;
-  border-radius: 5px;
-  opacity: 0.4;
-  pointer-events: none;
-}
-#donation-popup .btn-container input.active {
-  opacity: 1;
-  pointer-events: all;
-}
-dialog select {
-  max-width: 280px;
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  outline: none;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-.check-label {
-  display: block;
-  padding-inline: 30px;
-  line-height: 130%;
-  margin-bottom: 10px;
-}
-#donation-popup .checkbox {
-  display: block;
-  margin-inline: auto;
-  width: 30px;
-  height: 30px;
-}
-#donation-popup .progression-dots {
-  display: flex;
-  gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 50px;
 }
-#donation-popup .progression-dots .dot {
-  width: 10px;
-  height: 10px;
-  border: 1px solid #00a092;
-  background-color: #ffffff;
-  border-radius: 50%;
-  transition: 0.4s ease-in-out;
+.popup-header h2 {
+  color: #ffffff;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 31.7px;
+  font-weight: 500;
+  letter-spacing: 0%;
 }
-#donation-popup .progression-dots .dot.active {
-  background-color: #00a092;
+.popup-title {
+  margin-block: 30px;
+}
+.popup-title hr {
+  margin-top: 10px;
+}
+.popup-title h3 {
+  display: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.popup-title h3.active {
+  display: block;
 }
 .step {
   display: none;
+  margin-inline: 10px;
 }
-#donation-popup .active {
+.step.active {
   display: block;
 }
-#donation-popup .donation-popup-info h3 {
-  display: none;
-}
-#donation-popup .donation-popup-info h3.active {
-  display: block;
-}
-.step .form-group {
-  max-width: 280px;
-  width: 100%;
-  margin: auto;
-  text-align: left;
-}
-.step .form-group label {
+.step p {
   font-size: 18px;
-  padding-bottom: 5px;
-  display: block;
   line-height: 150%;
   letter-spacing: 0%;
 }
-.step .form-group label:before {
+.step p::before {
   content: "* ";
   color: #00a092;
 }
-.step .form-group input {
-  font-size: 18px;
+.step .btn-wrapper {
+  max-width: 300px;
   width: 100%;
-  height: 50px;
-  line-height: 150%;
-  letter-spacing: 0%;
-}
-.form-group:nth-of-type(2) {
-  margin-top: 30px;
-}
-.step:nth-of-type(2) .form-group p {
   margin-top: 10px;
-  color: #000000;
-  opacity: 0.7;
-  line-height: 150%;
-}
-.step:nth-of-type(3) form {
-  text-align: start;
-}
-.step:nth-of-type(3) .pet-select {
-  max-width: 210px;
-  margin-left: 10px;
-}
-.next {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-self: center;
-  justify-content: center;
-  max-width: 213px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.step .btn-wrapper button,
+.step .btn-wrapper input {
+  width: calc(50% - 10px);
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.9px;
+  transition: 0.4s ease-in-out;
+}
+.step .btn-wrapper input {
+  border: 1px solid black;
+  padding-left: 10px;
+  color: black;
+}
+.step .btn-wrapper button {
+  background-color: #00a092;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.step .btn-wrapper button.active,
+.step .btn-wrapper button:hover {
   opacity: 1;
 }
-.overflow-none {
-  overflow: hidden;
-} */
+.step .btn-wrapper button.active {
+  opacity: 1;
+}
+.step select {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-inline: 5px;
+}
+.step .btn-wrapper .special {
+  max-width: 209px;
+  width: 100%;
+  margin-inline: auto;
+}
+.step .checkbox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 240px;
+  margin-inline: auto;
+}
+.step .checkbox label {
+  text-align: center;
+  line-height: 130%;
+}
+.step .checkbox input {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.popup-navigation-container {
+  margin-block: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.popup-navigation-container .stepper-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.stepper-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid #00a092;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+}
+.stepper-dots .dot.active {
+  background-color: #00a092;
+}
+.popup-navigation-container .next {
+  max-width: 213px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #00a092;
+  outline: none;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.9px;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+}
+.popup-navigation-container .next:hover {
+  background-color: #05786e;
+}
+.popup-navigation-container .complete {
+  order: 3;
+  max-width: 280px;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  gap: 10px;
+  margin-inline: auto;
+  outline: none;
+  background-color: #f58021;
+  color: #ffffff;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.popup-navigation-container .back {
+  display: none;
+  border: none;
+  text-decoration: #00a092 underline;
+  outline: none;
+  background-color: transparent;
+  color: #00a092;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.popup-navigation-container .next.active {
+  display: flex;
+}
+.popup-navigation-container .back.active {
+  display: block;
+}
+.popup-navigation-container .complete.active {
+  display: flex;
+}
+.second-form {
+  text-align: left;
+}
+.form-group {
+  margin-top: 30px;
+}
+.form-group input {
+  font-size: 18px;
+  margin-top: 5px;
+}
+.form-group label::before {
+  content: "* ";
+  color: #00a092;
+}
+.form-group input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 18px;
+}
+.second-form .email-message {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+.second-form .email-message::before {
+  content: "";
+}
+.last-form {
+  text-align: start;
+}
+.last-form select {
+  max-width: 210px;
+}
+.form-group.year {
+  display: none;
+}
 @media (min-width: 640px) {
   .burger.active {
     right: 40px;
@@ -1557,6 +1575,112 @@ dialog select {
   .together .btn-container button {
     height: 65px;
   }
+  .donate-popup {
+    max-width: 600px;
+  }
+  .popup-header {
+    height: 99px;
+  }
+  .popup-header h2 {
+    font-size: 42px;
+    line-height: 51.2px;
+  }
+  .popup-title {
+    text-align: start;
+    margin-top: 50px;
+  }
+  .popup-title h3 {
+    padding-left: 66px;
+  }
+  .step .btn-wrapper {
+    max-width: 445px;
+    margin-inline: auto;
+    row-gap: 40px;
+    column-gap: 20px;
+  }
+  .step .btn-wrapper button {
+    max-width: 135px;
+    height: 65px;
+  }
+  .step .btn-wrapper .other {
+    max-width: 213px;
+  }
+  .step .btn-wrapper input {
+    height: 65px;
+  }
+  .step .btn-wrapper .special {
+    margin-inline: 0;
+    margin-right: auto;
+  }
+  .step select {
+    height: 65px;
+  }
+  .step .checkbox {
+    flex-direction: row-reverse;
+    max-width: 445px;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .step label {
+    font-size: 18px;
+  }
+  .step p {
+    text-align: start;
+    padding-left: 60px;
+  }
+  .popup-navigation-container {
+    flex-direction: row-reverse;
+    margin-inline: auto;
+    max-width: 445px;
+    justify-content: space-between;
+  }
+  .popup-navigation-container .next {
+    margin-inline: 0;
+    height: 74px;
+  }
+  .second-form {
+    max-width: 445px;
+    margin-inline: auto;
+  }
+  .second-form .email-message {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-top: 40px;
+  }
+  .form-group input {
+    margin-top: 10px;
+    height: 65px;
+  }
+  .last-form {
+    max-width: 445px;
+    margin-inline: auto;
+  }
+  .last-form label {
+    display: block;
+  }
+  .popup-navigation-container .complete {
+    height: 74px;
+    order: 3;
+  }
+  .form-group.year {
+    display: block;
+  }
+  .date-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .date-container .form-group {
+    width: 100%;
+  }
+  .date-container {
+    gap: 40px;
+    max-width: 420px;
+    max-width: 440px;
+    width: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -1683,7 +1807,7 @@ dialog select {
     grid-auto-flow: column;
     grid-auto-columns: 445px;
     padding-inline: 40px;
-    overflow-x: auto;
+    overflow-x: hidden;
     width: 100%;
   }
   .pets .btn-container {
@@ -1775,7 +1899,7 @@ dialog select {
     grid-template-rows: repeat(2, 463px);
     grid-auto-flow: column;
     grid-auto-columns: 515px;
-    overflow-x: auto;
+    overflow-x: hidden;
     width: 100%;
     gap: 20px;
     padding-left: 140px;
@@ -1952,6 +2076,75 @@ dialog select {
   }
   .together .btn-container button {
     max-width: 120px;
+  }
+  .donate-popup {
+    max-width: 920px;
+  }
+  .popup-header {
+    height: 135px;
+  }
+  .popup-title h3 {
+    padding-left: 115px;
+  }
+  .step .btn-wrapper {
+    max-width: 680px;
+    gap: 40px;
+  }
+  .step p {
+    padding-left: 109px;
+  }
+  .step .btn-wrapper button {
+    max-width: 80px;
+  }
+  .step .btn-wrapper .other {
+    max-width: 200px;
+  }
+  .step .btn-wrapper input {
+    max-width: 201px;
+    margin-right: auto;
+  }
+  .step .btn-wrapper .special {
+    margin-right: 0;
+    max-width: 200px;
+  }
+  .step select {
+    max-width: 440px;
+    margin-top: 0;
+  }
+  .step .checkbox {
+    max-width: 680px;
+    margin-top: 40px;
+  }
+  .popup-navigation-container {
+    max-width: 680px;
+  }
+  .popup-navigation-container .next {
+    max-width: 200px;
+  }
+  .second-form {
+    max-width: 680px;
+  }
+  .form-group {
+    margin-top: 50px;
+  }
+  .last-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 680px;
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+  .last-form .form-group {
+    margin-top: 0;
+    max-width: 200px;
+    width: 100%;
+  }
+  .last-form .form-group:first-of-type {
+    max-width: 400px;
+    width: 100%;
+  }
+  .popup-navigation-container .complete {
+    margin-inline: 0;
   }
 }
 @media (min-width: 1920px) {
