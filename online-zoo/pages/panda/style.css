@@ -133,9 +133,25 @@ aside .aside-box:nth-of-type(6) {
   width: 100%;
   display: block;
 }
-.live-animal-header img {
+.live-animal-header .panda-live {
   height: 200px;
   border-radius: 5px;
+}
+.panda-live-wrapper {
+  position: relative;
+}
+.panda-live-wrapper .live-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 18px;
+  width: 100%;
+  height: 13px;
+}
+.panda-live-wrapper:hover .live-btn path {
+  fill: #f58021;
+  transition: 0.4s ease-in-out;
 }
 .live-animal-header button {
   display: none;
@@ -360,7 +376,11 @@ aside .aside-box:nth-of-type(6) {
   .live-animal {
     left: 77px;
   }
-  .live-animal-header img {
+  .panda-live-wrapper .live-btn {
+    max-width: 38px;
+    height: 26px;
+  }
+  .live-animal-header .panda-live {
     width: 100%;
     height: 402px;
     padding-left: 0;
@@ -501,7 +521,11 @@ aside .aside-box:nth-of-type(6) {
     line-height: 65.8px;
     margin: 0;
   }
-  .live-animal-header img {
+  .panda-live-wrapper .live-btn {
+    max-width: 71px;
+    height: 50px;
+  }
+  .live-animal-header .panda-live {
     height: 760px;
   }
   .live-animal-header button.bottom {
