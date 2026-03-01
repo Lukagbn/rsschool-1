@@ -31,7 +31,7 @@ A fully responsive multi-page website for an online zoo, where users can watch l
 ### 🦒 Zoos Page
 
 - Live webcam embeds for each animal
-- 
+
 <img width="1920" height="1080" alt="zoos" src="https://github.com/user-attachments/assets/d5b9ed98-fb61-4428-a93a-96d9780fb5ad" />
 
 ### 📬 Contact Page
