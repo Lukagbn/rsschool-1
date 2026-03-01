@@ -31,6 +31,12 @@ header .container {
 .nav .social-container {
   display: none;
 }
+.social-container a {
+  transition: 0.4s ease-in-out;
+}
+.social-container a:hover {
+  scale: 1.1;
+}
 .nav-list {
   opacity: 0;
   display: flex;
@@ -104,6 +110,11 @@ header .container {
 .hero {
   position: relative;
   padding-top: 20px;
+  background-image: url(../../assets/images/panda.png);
+  background-position: 50% 93%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 650px;
 }
 .hero-content {
   margin-inline: 10px;
@@ -1171,11 +1182,9 @@ dialog select {
     height: 754px;
   }
   .hero {
+    height: unset;
     padding-top: 50px;
-    background-image: url("../../assets/images/panda.png");
-    background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: contain;
     padding-bottom: 50px;
   }
   .hero::before {

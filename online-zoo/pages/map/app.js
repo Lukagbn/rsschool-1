@@ -4,6 +4,7 @@ eagle.classList.add("active");
 
 pins.forEach((pin) => {
   pin.addEventListener("click", () => {
-    pin.classList.toggle("active");
+    pins.forEach((item) => item.classList.remove("active"));
+    pin.classList.add("active");
   });
 });
