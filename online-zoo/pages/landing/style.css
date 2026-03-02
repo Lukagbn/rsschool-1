@@ -2010,6 +2010,7 @@ body.overflow-hidden {
   .care-cards-wrapper .koala-banner {
     display: block;
     grid-column: span 2;
+    pointer-events: none;
   }
   .care-cards-wrapper .care-card {
     max-width: 455px;
