@@ -300,7 +300,9 @@ header .container {
   overflow-x: scroll;
 }
 .pet-card {
+  position: relative;
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   max-width: 300px;
   width: 100%;
@@ -309,6 +311,13 @@ header .container {
   color: #ffffff;
   border-radius: 5px;
   flex-shrink: 0;
+  transition: 0.4s ease-in-out;
+}
+.pet-card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 .pet-card .card-header {
   position: relative;
@@ -358,7 +367,7 @@ header .container {
   letter-spacing: 0%;
   line-height: 150%;
 }
-.pet-card .card-body a {
+.pet-card .card-body button {
   text-decoration: none;
   display: flex;
   max-width: 240px;
@@ -379,16 +388,19 @@ header .container {
   transition: 0.4s ease-in-out;
   border-radius: 5px;
 }
-.pet-card .card-body a svg path {
+.pet-card .card-body button svg path {
   fill: #f58021;
   transition: 0.4s ease-in-out;
 }
-.pet-card .card-body a:hover {
+.pet-card .card-body button:hover {
   color: #ffffff;
   background-color: #f58021;
 }
-.pet-card .card-body a:hover svg path {
+.pet-card .card-body button:hover svg path {
   fill: #ffffff;
+}
+.pet-card:hover {
+  scale: 0.98;
 }
 .choose-fav {
   display: none;
