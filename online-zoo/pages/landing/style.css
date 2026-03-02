@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+.visually-hidden {
+  display: none;
+}
 button {
   cursor: pointer;
 }
@@ -119,7 +122,7 @@ header .container {
 .hero-content {
   margin-inline: 10px;
 }
-.hero h1 {
+.hero h2 {
   color: #00a092;
   text-transform: uppercase;
   font-weight: 800;
@@ -1227,7 +1230,7 @@ body.overflow-hidden {
     align-items: flex-start;
     margin-inline: 20px;
   }
-  .hero h1 {
+  .hero h2 {
     font-size: 72px;
     letter-spacing: 1%;
     line-height: 83.5px;
@@ -1739,7 +1742,7 @@ body.overflow-hidden {
   .hero-content {
     margin-inline: 0;
   }
-  .hero h1 {
+  .hero h2 {
     font-size: 82px;
     line-height: 93px;
     max-width: 890px;

@@ -4,7 +4,7 @@
   max-width: 1400px;
   margin: 0 auto;
 }
-.map-container h1 {
+.map-container h2 {
   line-height: 130%;
   font-size: 32px;
   text-align: center;
@@ -80,7 +80,7 @@
   fill: #ffffff;
 }
 @media (min-width: 640px) {
-  .map-container h1 {
+  .map-container h2 {
     font-size: 44px;
     max-width: 500px;
     margin-inline: auto;
@@ -93,7 +93,7 @@
   }
 }
 @media (min-width: 1200px) {
-  .map-container h1 {
+  .map-container h2 {
     font-size: 54px;
     max-width: 590px;
     padding-bottom: 30px;
@@ -101,7 +101,7 @@
   }
 }
 @media (min-width: 1920px) {
-  .map-container h1 {
+  .map-container h2 {
     padding-bottom: 70px;
   }
   .map-container {

@@ -14,7 +14,7 @@
 .content-wrapper {
   margin-inline: 10px;
 }
-.text-wrapper h1 {
+.text-wrapper h2 {
   font-size: 26px;
   line-height: 31.7px;
   letter-spacing: 0%;
@@ -87,7 +87,7 @@ form button:hover {
   .content-wrapper {
     margin-inline: 20px;
   }
-  .text-wrapper h1 {
+  .text-wrapper h2 {
     font-size: 54px;
     line-height: 65.8px;
     font-weight: 600;
@@ -111,7 +111,7 @@ form button:hover {
     max-width: 835px;
     margin-inline: auto;
   }
-  .text-wrapper h1 {
+  .text-wrapper h2 {
     margin-top: 50px;
   }
   form {
@@ -135,7 +135,7 @@ form button:hover {
     max-width: 545px;
     text-align: start;
   }
-  .text-wrapper h1 {
+  .text-wrapper h2 {
     margin-top: 0;
     margin-bottom: 50px;
   }
