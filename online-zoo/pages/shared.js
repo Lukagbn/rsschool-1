@@ -89,19 +89,15 @@ if (donationBtn && makeYourDonation) {
     updateNavigation();
   });
 }
+// dropdown logic
 const allDropDowns = document.querySelectorAll(".drop-down");
 
 allDropDowns.forEach((container) => {
   const selectedText = container.querySelector(".selected");
   const items = container.querySelectorAll(".drop-down-list li");
 
-  // 1. Toggle this specific dropdown
   container.addEventListener("click", (e) => {
-    // Prevent menu from closing and immediately reopening
-    // if clicking the list itself
     if (e.target.closest(".drop-down-list")) return;
-
-    // Close all OTHER dropdowns first (Optional but professional)
     allDropDowns.forEach((other) => {
       if (other !== container) other.classList.remove("active");
     });
@@ -109,10 +105,9 @@ allDropDowns.forEach((container) => {
     container.classList.toggle("active");
   });
 
-  // 2. Handle item selection for this specific dropdown
   items.forEach((item) => {
     item.addEventListener("click", (e) => {
-      e.stopPropagation(); // Stop bubbling to container
+      e.stopPropagation();
       selectedText.innerText = item.innerText;
       container.classList.remove("active");
     });
