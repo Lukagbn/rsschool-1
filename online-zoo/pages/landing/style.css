@@ -1213,6 +1213,101 @@ body.overflow-hidden {
 .form-group.year {
   display: none;
 }
+.drop-down {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+.selected-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+.selected-container span {
+  background-color: #80cfc8;
+  height: 100%;
+  width: 32px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drop-down span img {
+  transition: 0.2s ease-in-out;
+  user-select: none;
+}
+.selected {
+  color: black;
+  opacity: 0.7;
+  user-select: none;
+}
+.drop-down .drop-down-list {
+  max-height: 300px;
+  background-color: #ffffff;
+  top: 100%;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  border: 1px solid black;
+  border-top: 0px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: 5px;
+}
+.drop-down-list li {
+  padding: 10px;
+  user-select: none;
+}
+.drop-down.active .drop-down-list {
+  display: flex;
+  text-align: left;
+}
+.drop-down.active span img {
+  transform: rotate(180deg);
+}
+.drop-down .drop-down-list li:hover {
+  background-color: #80cfc8;
+}
+.drop-down .drop-down-list::-webkit-scrollbar {
+  width: 32px;
+}
+.drop-down .drop-down-list::-webkit-scrollbar-thumb {
+  min-height: 50px;
+  background-color: #80cfc8;
+}
+.drop-down .drop-down-list::-webkit-scrollbar-button:single-button {
+  display: block;
+  border-style: solid;
+  height: 30px;
+  width: 32px;
+}
+.drop-down
+  .drop-down-list::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url(../../assets/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+}
+.drop-down
+  .drop-down-list::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url(../../assets/icons/up-arrow.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+}
+.date-container .form-group {
+  max-width: 210px;
+}
 @media (min-width: 640px) {
   .burger.active {
     right: 40px;
@@ -1711,6 +1806,10 @@ body.overflow-hidden {
     max-width: 440px;
     width: 100%;
   }
+  .drop-down {
+    max-width: 445px;
+    height: 65px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -2176,6 +2275,9 @@ body.overflow-hidden {
   }
   .popup-navigation-container .complete {
     margin-inline: 0;
+  }
+  .drop-down {
+    max-width: 440px;
   }
 }
 @media (min-width: 1920px) {

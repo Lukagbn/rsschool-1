@@ -446,18 +446,34 @@
             <button class="other active">Other</button>
             <input type="number" />
             <button class="special">for special pet</button>
-            <select id="pet-select" name="favourite-pet">
-              <option value="" disabled selected>Choose your favourite</option>
-              <option value="panda">Lukas the Panda</option>
-              <option value="lemur">Andy the Lemur</option>
-              <option value="gorilla">Glen the Gorilla</option>
-              <option value="panda">Lukas the Panda</option>
-              <option value="alligator">Mike the Alligator</option>
-              <option value="eagles">Sam & Lora the eagles ...</option>
-              <option value="koala">Liz the Koala</option>
-              <option value="lion">Shake the Lion</option>
-              <option value="tiger">Senja the Tiger</option>
-            </select>
+            <div class="drop-down">
+              <div class="selected-container">
+                <div class="selected">Choose your favorite</div>
+                <span
+                  ><img
+                    src="../../assets/icons/arrow-down.svg"
+                    alt="drop down arrow"
+                /></span>
+              </div>
+              <ul class="drop-down-list">
+                <li>Lukas the Panda</li>
+                <li>Andy the Lemur</li>
+                <li>Glen the Gorilla</li>
+                <li>Mike the Alligator</li>
+                <li>Sam & Lora the eagles ...</li>
+                <li>Liz the Koala</li>
+                <li>Shake the Lion</li>
+                <li>Senja the Tiger</li>
+                <li>Lukas the Panda</li>
+                <li>Andy the Lemur</li>
+                <li>Glen the Gorilla</li>
+                <li>Mike the Alligator</li>
+                <li>Sam & Lora the eagles ...</li>
+                <li>Liz the Koala</li>
+                <li>Shake the Lion</li>
+                <li>Senja the Tiger</li>
+              </ul>
+            </div>
           </div>
           <div class="checkbox">
             <label for="check">Make this a monthly recurring gift</label>
@@ -503,33 +519,52 @@
             </div>
             <div class="date-container">
               <div class="form-group">
-                <label for="date">Expiration Date</label>
-                <select id="date" name="month">
-                  <option value="" disabled selected>Month</option>
-                  <option value="january">January</option>
-                  <option value="february">February</option>
-                  <option value="march">March</option>
-                  <option value="april">April</option>
-                  <option value="june">June</option>
-                  <option value="july">July</option>
-                  <option value="august">August</option>
-                  <option value="september">September</option>
-                  <option value="october">October</option>
-                  <option value="november">November</option>
-                  <option value="december">December</option>
-                </select>
+                <label>Expiration Date</label>
+                <div class="drop-down">
+                  <div class="selected-container">
+                    <div class="selected">Month</div>
+                    <span
+                      ><img
+                        src="../../assets/icons/arrow-down.svg"
+                        alt="drop down arrow"
+                    /></span>
+                  </div>
+                  <ul class="drop-down-list">
+                    <li>January</li>
+                    <li>February</li>
+                    <li>March</li>
+                    <li>April</li>
+                    <li>June</li>
+                    <li>July</li>
+                    <li>August</li>
+                    <li>September</li>
+                    <li>October</li>
+                    <li>November</li>
+                    <li>December</li>
+                  </ul>
+                </div>
               </div>
               <div class="form-group year">
-                <label for="year">Year</label>
-                <select id="year" name="month">
-                  <option value="" disabled selected>2026</option>
-                  <option value="january">2027</option>
-                  <option value="february">2028</option>
-                  <option value="march">2029</option>
-                  <option value="april">2030</option>
-                  <option value="june">2031</option>
-                  <option value="july">2032</option>
-                </select>
+                <label>Year</label>
+                <div class="drop-down">
+                  <div class="selected-container">
+                    <div class="selected">year</div>
+                    <span
+                      ><img
+                        src="../../assets/icons/arrow-down.svg"
+                        alt="drop down arrow"
+                    /></span>
+                  </div>
+                  <ul class="drop-down-list">
+                    <li>2026</li>
+                    <li>2027</li>
+                    <li>2028</li>
+                    <li>2029</li>
+                    <li>2030</li>
+                    <li>2031</li>
+                    <li>2032</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </form>
