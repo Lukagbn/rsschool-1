@@ -28,7 +28,8 @@ async function fetchPets() {
         petsCardContainer.innerHTML = cardsLoader();
         const res = await fetch("https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/pets");
         if (!res.ok) {
-            petsCardContainer.innerHTML = `<p class="loader">Failled to load pets try refreshing</p>`;
+            petsCardContainer.innerHTML = `<p class="loader">Something went wrong. Please, refresh the page</p>`;
+            return;
         }
         const result = await res.json();
         const pets = result.data
@@ -80,4 +81,40 @@ function cardsLoader() {
     return Array(6).fill(card).join("");
 }
 fetchPets();
+async function fetchReviews() {
+    try {
+        if (!testimonialsContainer)
+            return;
+        const res = await fetch("https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/feedback");
+        const result = await res.json();
+        if (!res.ok) {
+            testimonialsContainer.innerHTML = `<p class="loader">Something went wrong. Please, refresh the page</p>`;
+            return;
+        }
+        const feedback = result.data
+            .map((card) => {
+            return `            <div class="testimonial-card">
+              <div class="card-head">
+                <img src="../../assets/images/backticks.png" alt="backticks" />
+                <h3>${card.city}, ${card.month} ${card.year}</h3>
+              </div>
+              <div class="card-body">
+                <p>
+                 ${card.text}
+                </p>
+                <h4>${card.name}</h4>
+              </div>
+            </div>`;
+        })
+            .join("");
+        testimonialsContainer.innerHTML = feedback;
+    }
+    catch (error) {
+        if (!testimonialsContainer)
+            return;
+        testimonialsContainer.innerHTML = `<p class="loader">Internal server error</p>`;
+        console.log("error", error);
+    }
+}
+fetchReviews();
 //# sourceMappingURL=app.js.map
