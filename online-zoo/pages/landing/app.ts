@@ -1,38 +1,60 @@
-"use strict";
-const petsSliderLeftBtn = document.querySelector(".left-arrow-btn");
-const petsSliderRightBtn = document.querySelector(".right-arrow-btn");
-const petsCardContainer = document.querySelector(".pets-card-container");
-const testiLeftBtn = document.querySelector(".testi-left-btn");
-const testiRightBtn = document.querySelector(".testi-right-btn");
-const testimonialsContainer = document.querySelector(".testimonials-cards-wrapper");
+const petsSliderLeftBtn =
+  document.querySelector<HTMLButtonElement>(".left-arrow-btn");
+const petsSliderRightBtn =
+  document.querySelector<HTMLButtonElement>(".right-arrow-btn");
+const petsCardContainer = document.querySelector<HTMLElement>(
+  ".pets-card-container",
+);
+const testiLeftBtn =
+  document.querySelector<HTMLButtonElement>(".testi-left-btn");
+const testiRightBtn =
+  document.querySelector<HTMLButtonElement>(".testi-right-btn");
+const testimonialsContainer = document.querySelector<HTMLElement>(
+  ".testimonials-cards-wrapper",
+);
+
 petsSliderLeftBtn?.addEventListener("click", () => {
-    const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
-    petsCardContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
+  petsCardContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 });
 petsSliderRightBtn?.addEventListener("click", () => {
-    const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
-    petsCardContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
+  petsCardContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
 });
 testiLeftBtn?.addEventListener("click", () => {
-    const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
-    testimonialsContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
+  testimonialsContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 });
 testiRightBtn?.addEventListener("click", () => {
-    const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
-    testimonialsContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
+  testimonialsContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
 });
+
+interface pet {
+  id: number;
+  name: string;
+  commonName: string;
+  description: string;
+}
+interface petApiResponse {
+  data: pet[];
+}
+
 async function fetchPets() {
-    try {
-        if (!petsCardContainer)
-            return;
-        petsCardContainer.innerHTML = cardsLoader();
-        const res = await fetch("https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/pets");
-        if (!res.ok) {
-            petsCardContainer.innerHTML = `<p class="loader">Failled to load pets try refreshing</p>`;
-        }
-        const result = await res.json();
-        const pets = result.data
-            .map((pet) => `     <div class="pet-card">
+  try {
+    if (!petsCardContainer) return;
+    petsCardContainer.innerHTML = cardsLoader();
+    const res = await fetch(
+      "https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/pets",
+    );
+    if (!res.ok) {
+      petsCardContainer.innerHTML = `<p class="loader">Failled to load pets try refreshing</p>`;
+    }
+    const result: petApiResponse = await res.json();
+    const pets = result.data
+      .map(
+        (pet) =>
+          `     <div class="pet-card">
             <a href="../../pages/zoos/eagles.html"></a>
             <div class="card-header">
               <img
@@ -64,20 +86,18 @@ async function fetchPets() {
                 </svg>
               </button>
             </div>
-          </div>`)
-            .join("");
-        petsCardContainer.innerHTML = pets;
-    }
-    catch (error) {
-        if (!petsCardContainer)
-            return;
-        petsCardContainer.innerHTML = `<p class="loader">Internal server error</p>`;
-        console.log("error", error);
-    }
+          </div>`,
+      )
+      .join("");
+    petsCardContainer.innerHTML = pets;
+  } catch (error) {
+    if (!petsCardContainer) return;
+    petsCardContainer.innerHTML = `<p class="loader">Internal server error</p>`;
+    console.log("error", error);
+  }
 }
 function cardsLoader() {
-    const card = `<div class="card-loader"><div class="card-header card-loader-img"></div></div>`;
-    return Array(6).fill(card).join("");
+  const card = `<div class="card-loader"><div class="card-header card-loader-img"></div></div>`;
+  return Array(6).fill(card).join("");
 }
 fetchPets();
-//# sourceMappingURL=app.js.map
