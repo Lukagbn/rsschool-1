@@ -2327,6 +2327,10 @@ body.overflow-hidden {
   .drop-down {
     max-width: 440px;
   }
+  .card-loader {
+    max-width: 445px;
+    height: 716px;
+  }
 }
 @media (min-width: 1920px) {
   header .container {

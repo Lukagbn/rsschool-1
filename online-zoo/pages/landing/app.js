@@ -5,22 +5,39 @@ const petsCardContainer = document.querySelector(".pets-card-container");
 const testiLeftBtn = document.querySelector(".testi-left-btn");
 const testiRightBtn = document.querySelector(".testi-right-btn");
 const testimonialsContainer = document.querySelector(".testimonials-cards-wrapper");
-petsSliderLeftBtn?.addEventListener("click", () => {
-    const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
-    petsCardContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-});
-petsSliderRightBtn?.addEventListener("click", () => {
-    const scrollAmount = (petsCardContainer?.offsetWidth ?? 0) * 0.4;
-    petsCardContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
-});
-testiLeftBtn?.addEventListener("click", () => {
-    const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
-    testimonialsContainer?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-});
-testiRightBtn?.addEventListener("click", () => {
-    const scrollAmount = (testimonialsContainer?.offsetWidth ?? 0) * 0.5;
-    testimonialsContainer?.scrollBy({ left: scrollAmount, behavior: "smooth" });
-});
+function slider(container, leftBtn, rightBtn) {
+    if (container && leftBtn && rightBtn) {
+        leftBtn.addEventListener("click", () => {
+            const isAtStart = container.scrollLeft === 0;
+            if (isAtStart) {
+                container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
+            }
+            else {
+                container.scrollBy({
+                    left: -container.offsetWidth * 0.5,
+                    behavior: "smooth",
+                });
+            }
+        });
+        rightBtn.addEventListener("click", () => {
+            const isAtEnd = container.scrollLeft + container.offsetWidth >= container.scrollWidth;
+            if (isAtEnd) {
+                container.scrollTo({
+                    left: -container.scrollWidth,
+                    behavior: "smooth",
+                });
+            }
+            else {
+                container.scrollBy({
+                    left: container.offsetWidth * 0.5,
+                    behavior: "smooth",
+                });
+            }
+        });
+    }
+}
+slider(testimonialsContainer, testiLeftBtn, testiRightBtn);
+slider(petsCardContainer, petsSliderLeftBtn, petsSliderRightBtn);
 async function fetchPets() {
     try {
         if (!petsCardContainer)
@@ -78,7 +95,7 @@ async function fetchPets() {
 }
 function cardsLoader() {
     const card = `<div class="card-loader"><div class="card-header card-loader-img"></div></div>`;
-    return Array(6).fill(card).join("");
+    return Array(9).fill(card).join("");
 }
 fetchPets();
 async function fetchReviews() {
