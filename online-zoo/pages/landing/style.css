@@ -1308,7 +1308,6 @@ body.overflow-hidden {
 .date-container .form-group {
   max-width: 210px;
 }
-
 /* animations */
 .card-loader {
   position: relative;
@@ -1344,7 +1343,125 @@ body.overflow-hidden {
   background-size: 200% 100%;
   animation: shine 1.5s infinite;
 }
-
+.auth-container img {
+  max-width: 30px;
+}
+.auth-container .log-in,
+.auth-container .sign-up {
+  display: none;
+}
+.auth-container .log-in.active {
+  display: inline;
+}
+.auth-container .sign-up.active {
+  display: inline;
+}
+.auth-dialog-container {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  border: none;
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+}
+.auth-dialog-container::backdrop {
+  background-color: #000000;
+  opacity: 0.7;
+}
+.logged-out-user {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  gap: 30px;
+}
+.logged-out-user.active {
+  display: flex;
+}
+.authLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.close-modal {
+  font-weight: 600;
+  color: #00a092;
+  font-size: 25px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.logged-out-user a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #20113d;
+  gap: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  max-width: 130px;
+  width: 100%;
+  justify-content: space-between;
+}
+.logged-out-user a svg path {
+  fill: #20113d;
+  transition: 0.4s ease-in-out;
+}
+.logged-out-user a:hover {
+  background-color: #20113d;
+  color: #ffffff;
+}
+.logged-out-user a:hover svg path {
+  fill: #ffffff;
+}
+.auth-dialog-container .logged-in-user {
+  display: none;
+}
+.auth-dialog-container .logged-in-user.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.auth-dialog-container .logged-in-user h4 {
+  text-align: center;
+}
+.auth-dialog-container .logged-in-user button {
+  text-decoration: none;
+  color: #20113d;
+  gap: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  max-width: 130px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.auth-dialog-container .logged-in-user button:hover {
+  background-color: #20113d;
+  color: #ffffff;
+}
+.feedback-loader {
+  border-radius: 5px;
+  background-color: #ffff;
+  flex-shrink: 0;
+  max-width: 300px;
+  width: 100%;
+  height: 570px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease-in-out;
+}
 @keyframes shine {
   0% {
     background-position: 200% 0;

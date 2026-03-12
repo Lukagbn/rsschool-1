@@ -1,4 +1,4 @@
-"use strict";
+import checkUser from "../../utils/checkUser.js";
 const petsSliderLeftBtn = document.querySelector(".left-arrow-btn");
 const petsSliderRightBtn = document.querySelector(".right-arrow-btn");
 const petsCardContainer = document.querySelector(".pets-card-container");
@@ -38,6 +38,92 @@ function slider(container, leftBtn, rightBtn) {
 }
 slider(testimonialsContainer, testiLeftBtn, testiRightBtn);
 slider(petsCardContainer, petsSliderLeftBtn, petsSliderRightBtn);
+const petImges = [
+    {
+        img: "../../assets/images/sam&lora.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+    {
+        img: "../../assets/images/senja.png",
+    },
+];
 async function fetchPets() {
     try {
         if (!petsCardContainer)
@@ -50,11 +136,11 @@ async function fetchPets() {
         }
         const result = await res.json();
         const pets = result.data
-            .map((pet) => `     <div class="pet-card">
+            .map((pet, index) => `     <div class="pet-card">
             <a href="../../pages/zoos/eagles.html"></a>
             <div class="card-header">
               <img
-                src="../../assets/images/westandbaldeagles.png"
+               src="${petImges[index]?.img}"
                 alt="${pet.commonName}"
               />
               <p>${pet.name}</p>
@@ -98,16 +184,21 @@ function cardsLoader() {
     return Array(9).fill(card).join("");
 }
 fetchPets();
+function feedbackLoader() {
+    const feedback = `<div class="feedback-loader"><div class="feedback-header"></div></div>`;
+    return Array(9).fill(feedback).join("");
+}
 async function fetchReviews() {
     try {
         if (!testimonialsContainer)
             return;
+        testimonialsContainer.innerHTML = feedbackLoader();
         const res = await fetch("https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/feedback");
-        const result = await res.json();
         if (!res.ok) {
             testimonialsContainer.innerHTML = `<p class="loader">Something went wrong. Please, refresh the page</p>`;
             return;
         }
+        const result = await res.json();
         const feedback = result.data
             .map((card) => {
             return `            <div class="testimonial-card">
@@ -134,4 +225,5 @@ async function fetchReviews() {
     }
 }
 fetchReviews();
+checkUser();
 //# sourceMappingURL=app.js.map

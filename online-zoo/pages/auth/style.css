@@ -1,0 +1,27 @@
+main {
+  min-height: 100vh;
+}
+form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+.error {
+  color: red;
+}
+form button {
+  margin-top: 40px;
+  width: 100%;
+  background-color: #f58021;
+  border: none;
+  outline: none;
+  height: 48px;
+  border-radius: 62px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffff;
+  transition: 0.4s ease-in-out;
+}
+form button:hover {
+  background-color: #d26004;
+}
