@@ -2,8 +2,6 @@ const authDialog = document.getElementById("auth");
 const userIcon = document.querySelector(".auth-container img");
 const loggedInSection = authDialog.querySelector(".logged-in-user");
 const loggedOutSection = authDialog.querySelector(".logged-out-user");
-const logIn = document.querySelector(".auth-dialog-container .log-in");
-const signUp = document.querySelector(".auth-dialog-container .sign-up");
 const logOUt = document.querySelector(".logged-in-user .log-out-btn");
 const authParagraph = document.querySelector(".auth-container p");
 const loggedInName = document.querySelector(".logged-in-user h3");
@@ -12,24 +10,17 @@ const closeModal = document.querySelector(".close-modal");
 closeModal?.addEventListener("click", () => {
     authDialog?.close();
 });
-logIn?.addEventListener("click", () => {
-    localStorage.setItem("user", "true");
-    window.location.reload();
-});
-signUp?.addEventListener("click", () => {
-    localStorage.removeItem("user");
-    window.location.reload();
-});
 userIcon?.addEventListener("click", () => {
     authDialog?.showModal();
 });
 logOUt?.addEventListener("click", () => {
     localStorage.removeItem("user");
+    sessionStorage.removeItem("user");
     window.location.reload();
 });
 export default function checkUser() {
-    const user = localStorage.getItem("user");
-    const userEmail = localStorage.getItem("email");
+    const user = localStorage.getItem("user") || sessionStorage.getItem("user");
+    const userEmail = localStorage.getItem("email") || sessionStorage.getItem("email");
     if (user && userEmail && authParagraph && loggedInName && loggedInEmail) {
         authParagraph.innerHTML = user;
         loggedInName.innerHTML += " " + user;
