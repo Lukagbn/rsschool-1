@@ -207,7 +207,6 @@ function cardsLoader() {
   const card = `<div class="card-loader"><div class="card-header card-loader-img"></div></div>`;
   return Array(9).fill(card).join("");
 }
-fetchPets();
 interface feedback {
   city: string;
   id: number;
@@ -260,3 +259,4 @@ async function fetchReviews() {
 }
 fetchReviews();
 checkUser();
+fetchPets();

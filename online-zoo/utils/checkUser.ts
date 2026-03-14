@@ -1,12 +1,3 @@
-// data
-// :
-// {access_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6I…TEyfQ.yn5WgVO6R5M4RanZFN9LDLenqiDP0pq4EIyyE0-UtnY', user: {…}}
-// message
-// :
-// "Login successful"
-// [[Prototype]]
-// :
-// Object
 export interface user {
   login: string;
   email: string;

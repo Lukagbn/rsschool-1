@@ -183,7 +183,6 @@ function cardsLoader() {
     const card = `<div class="card-loader"><div class="card-header card-loader-img"></div></div>`;
     return Array(9).fill(card).join("");
 }
-fetchPets();
 function feedbackLoader() {
     const feedback = `<div class="feedback-loader"><div class="feedback-header"></div></div>`;
     return Array(9).fill(feedback).join("");
@@ -226,4 +225,5 @@ async function fetchReviews() {
 }
 fetchReviews();
 checkUser();
+fetchPets();
 //# sourceMappingURL=app.js.map

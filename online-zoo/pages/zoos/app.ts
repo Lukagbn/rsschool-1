@@ -200,7 +200,6 @@ fetchCameras("1");
 mapDialogeClose?.addEventListener("click", () => {
   mapDialog.close();
 });
-
 mapDialog?.addEventListener("click", (e) => {
   if (e.target === mapDialog) {
     mapDialog.close();

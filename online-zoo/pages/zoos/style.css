@@ -419,6 +419,9 @@ aside .aside-box:nth-of-type(6) {
   right: 10px;
   top: 10px;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 @keyframes shine {
   0% {
     background-position: 200% 0;
