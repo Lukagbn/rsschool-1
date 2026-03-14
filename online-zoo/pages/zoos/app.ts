@@ -42,11 +42,13 @@ const animalBioDescription = document.querySelector<HTMLParagraphElement>(
 );
 const animalBioImage =
   document.querySelector<HTMLImageElement>(".animal-bio img");
+const didYouKnowSection = document.querySelector<HTMLElement>(".did-you-know");
 const didYouKnowParagraph =
   document.querySelector<HTMLParagraphElement>(".did-you-know p");
-const liveAnimalHeader = document.querySelector<HTMLHeadingElement>(
-  ".live-animal-header-wrapper h2",
+const liveAnimalHeaderWrapper = document.querySelector<HTMLHeadingElement>(
+  ".live-animal-header-wrapper",
 );
+const animalBioSection = document.querySelector<HTMLElement>(".animal-bio");
 interface animalBio {
   id: number;
   commonName: string;
@@ -95,47 +97,85 @@ const petImagesArray: petImages[] = [
     img: "../../assets/images/eaglebio.png",
   },
 ];
-
+function petBioLoader() {
+  const loader = `<div class="pet-bio-loader"></div>`;
+  return Array(1).fill(loader).join("");
+}
+function didYouKnowLoader() {
+  const loader = `<div class="did-you-know-loader"></div>`;
+  return Array(1).fill(loader).join("");
+}
+function animalBioIntroLoader() {
+  const loader = `<div class="animal-bio-intro-loader"></div>`;
+  return Array(1).fill(loader).join("");
+}
+function liveCamHeaderLoader() {
+  const loader = `<div class="live-animal-camera-header"></div>`;
+  return Array(1).fill(loader).join("");
+}
 async function fetchAnimals(id: string, petImagesArray: petImages[]) {
   try {
+    if (!animalBioSection) return;
+    if (!didYouKnowSection) return;
+    if (!didYouKnowParagraph) return;
+    if (!animalBioDescription) return;
+    const originalContent = animalBioSection.innerHTML;
+    animalBioSection.innerHTML = petBioLoader();
+    didYouKnowParagraph.innerHTML = didYouKnowLoader();
+    animalBioDescription.innerHTML = animalBioIntroLoader();
     const res = await fetch(
       `https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/pets/${id}`,
     );
     const result: animalBioApiResponse = await res.json();
-    animalBioText.forEach((item) => {
+    animalBioSection.innerHTML = originalContent;
+    if (!res.ok) {
+      animalBioSection.innerHTML = `<p class="error">Something went wrong. Please, refresh the page</p>`;
+      didYouKnowParagraph.innerText =
+        "Something went wrong. Please, refresh the page";
+      animalBioDescription.innerHTML = `<p class="error">Something went wrong. Please, refresh the page</p>`;
+    }
+    const freshImages = animalBioSection.querySelector<HTMLImageElement>("img");
+    const freshTextBoxes =
+      animalBioSection.querySelectorAll<HTMLElement>(".text-box");
+
+    const petImage = petImagesArray.find((image) => image.id === Number(id));
+    if (freshImages && petImage) {
+      freshImages.src = petImage.img;
+    }
+    didYouKnowParagraph.innerText = result.data.description;
+    freshTextBoxes.forEach((item) => {
       const paragraph = item.querySelector("p");
       if (!paragraph) return;
-      if (!animalBioImage) return;
-      if (!didYouKnowParagraph) return;
-      if (!res.ok) {
-        paragraph.innerText = "error";
-      }
-      const petImage = petImagesArray.find((image) => image.id === Number(id));
-      if (animalBioImage && petImage) {
-        animalBioImage.src = petImage.img;
-      }
-      didYouKnowParagraph.innerText = `${result.data.description}`;
       const key = item.dataset.value as keyof animalBio;
       if (key && result.data[key] !== undefined) {
         paragraph.innerText = String(result.data[key]);
       }
     });
-    if (!animalBioDescription) return;
-    animalBioDescription.innerText = `${result.data.detailedDescription}`;
+    animalBioDescription.innerText = result.data.detailedDescription;
   } catch (error) {
     console.log(error);
   }
 }
 async function fetchCameras(id: string) {
+  if (!liveAnimalHeaderWrapper) return;
+  const original = liveAnimalHeaderWrapper.innerHTML;
+  liveAnimalHeaderWrapper.innerHTML = liveCamHeaderLoader();
   const res = await fetch(
     "https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/cameras",
   );
   const result: petCameraApiResponse = await res.json();
-  const filtered = result.data.filter((item) => item.petId == Number(id));
-  console.log(filtered[0]);
-  if (liveAnimalHeader) {
-    liveAnimalHeader.innerText = filtered[0].text;
+  liveAnimalHeaderWrapper.innerHTML = original;
+  const WrapperHeader =
+    liveAnimalHeaderWrapper.querySelector<HTMLHeadingElement>(
+      ".live-animal-header-wrapper h2",
+    );
+  if (!WrapperHeader) return;
+  if (!res.ok) {
+    WrapperHeader.innerText = `Something went wrong. Please, refresh the page`;
+    return;
   }
+  const filtered = result.data.filter((item) => item.petId == Number(id));
+  WrapperHeader.innerText = filtered[0].text;
 }
 asidePanel?.forEach((item) => {
   const id = item.dataset.id;
