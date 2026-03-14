@@ -34,6 +34,10 @@ const didYouKnowSection = document.querySelector(".did-you-know");
 const didYouKnowParagraph = document.querySelector(".did-you-know p");
 const liveAnimalHeaderWrapper = document.querySelector(".live-animal-header-wrapper");
 const animalBioSection = document.querySelector(".animal-bio");
+const viewMapBtn = document.querySelector(".view-map");
+const mapDialog = document.getElementById("animal-map");
+const mapIframe = document.getElementById("animal-map-iframe");
+const mapDialogeClose = mapDialog.querySelector("span");
 const petImagesArray = [
     {
         id: 1,
@@ -85,6 +89,10 @@ async function fetchAnimals(id, petImagesArray) {
         const res = await fetch(`https://vsqsnqnxkh.execute-api.eu-central-1.amazonaws.com/prod/pets/${id}`);
         const result = await res.json();
         animalBioSection.innerHTML = originalContent;
+        const freshViewMapBtn = animalBioSection.querySelector(".view-map");
+        freshViewMapBtn?.addEventListener("click", () => {
+            mapDialog.showModal();
+        });
         if (!res.ok) {
             animalBioSection.innerHTML = `<p class="error">Something went wrong. Please, refresh the page</p>`;
             didYouKnowParagraph.innerText =
@@ -105,6 +113,7 @@ async function fetchAnimals(id, petImagesArray) {
             const key = item.dataset.value;
             if (key && result.data[key] !== undefined) {
                 paragraph.innerText = String(result.data[key]);
+                mapIframe.src = `https://maps.google.com/maps?q=${result.data.latitude},${result.data.longitude}&z=5&output=embed`;
             }
         });
         animalBioDescription.innerText = result.data.detailedDescription;
@@ -140,4 +149,12 @@ asidePanel?.forEach((item) => {
 });
 fetchAnimals("1", petImagesArray);
 fetchCameras("1");
+mapDialogeClose?.addEventListener("click", () => {
+    mapDialog.close();
+});
+mapDialog?.addEventListener("click", (e) => {
+    if (e.target === mapDialog) {
+        mapDialog.close();
+    }
+});
 //# sourceMappingURL=app.js.map

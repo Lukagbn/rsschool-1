@@ -49,6 +49,12 @@ const liveAnimalHeaderWrapper = document.querySelector<HTMLHeadingElement>(
   ".live-animal-header-wrapper",
 );
 const animalBioSection = document.querySelector<HTMLElement>(".animal-bio");
+const viewMapBtn = document.querySelector<HTMLButtonElement>(".view-map");
+const mapDialog = document.getElementById("animal-map") as HTMLDialogElement;
+const mapIframe = document.getElementById(
+  "animal-map-iframe",
+) as HTMLIFrameElement;
+const mapDialogeClose = mapDialog.querySelector<HTMLSpanElement>("span");
 interface animalBio {
   id: number;
   commonName: string;
@@ -128,6 +134,11 @@ async function fetchAnimals(id: string, petImagesArray: petImages[]) {
     );
     const result: animalBioApiResponse = await res.json();
     animalBioSection.innerHTML = originalContent;
+    const freshViewMapBtn =
+      animalBioSection.querySelector<HTMLAnchorElement>(".view-map");
+    freshViewMapBtn?.addEventListener("click", () => {
+      mapDialog.showModal();
+    });
     if (!res.ok) {
       animalBioSection.innerHTML = `<p class="error">Something went wrong. Please, refresh the page</p>`;
       didYouKnowParagraph.innerText =
@@ -137,7 +148,6 @@ async function fetchAnimals(id: string, petImagesArray: petImages[]) {
     const freshImages = animalBioSection.querySelector<HTMLImageElement>("img");
     const freshTextBoxes =
       animalBioSection.querySelectorAll<HTMLElement>(".text-box");
-
     const petImage = petImagesArray.find((image) => image.id === Number(id));
     if (freshImages && petImage) {
       freshImages.src = petImage.img;
@@ -149,6 +159,7 @@ async function fetchAnimals(id: string, petImagesArray: petImages[]) {
       const key = item.dataset.value as keyof animalBio;
       if (key && result.data[key] !== undefined) {
         paragraph.innerText = String(result.data[key]);
+        mapIframe.src = `https://maps.google.com/maps?q=${result.data.latitude},${result.data.longitude}&z=5&output=embed`;
       }
     });
     animalBioDescription.innerText = result.data.detailedDescription;
@@ -186,3 +197,12 @@ asidePanel?.forEach((item) => {
 });
 fetchAnimals("1", petImagesArray);
 fetchCameras("1");
+mapDialogeClose?.addEventListener("click", () => {
+  mapDialog.close();
+});
+
+mapDialog?.addEventListener("click", (e) => {
+  if (e.target === mapDialog) {
+    mapDialog.close();
+  }
+});
