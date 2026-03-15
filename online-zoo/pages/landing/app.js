@@ -40,40 +40,40 @@ slider(testimonialsContainer, testiLeftBtn, testiRightBtn);
 slider(petsCardContainer, petsSliderLeftBtn, petsSliderRightBtn);
 const petImges = [
     {
-        img: "../../assets/images/sam&lora.png",
+        img: "../../assets/images/giantpanda.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/lemur.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/gorillabio.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/mike.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/westandbaldeagles.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/koala.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/africanlion.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/sumatrantiger.png",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/redpanda.webp",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/mountaingorilla.webp",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/africanelephant.webp",
     },
     {
-        img: "../../assets/images/senja.png",
+        img: "../../assets/images/seaotter.jpg",
     },
     {
         img: "../../assets/images/senja.png",

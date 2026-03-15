@@ -328,6 +328,7 @@ header .container {
   display: block;
   width: 100%;
   object-fit: cover;
+  max-height: 440px;
 }
 .pet-card .card-header p {
   position: absolute;
@@ -1462,6 +1463,19 @@ body.overflow-hidden {
   flex-direction: column;
   transition: 0.4s ease-in-out;
 }
+.next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.next:not(:disabled) {
+  cursor: pointer;
+}
+.next:not(:disabled):hover {
+  background-color: #05786e;
+}
+.lg {
+  display: none;
+}
 @keyframes shine {
   0% {
     background-position: 200% 0;
@@ -2447,6 +2461,12 @@ body.overflow-hidden {
   .card-loader {
     max-width: 445px;
     height: 716px;
+  }
+  .sm {
+    display: none;
+  }
+  .lg {
+    display: block;
   }
 }
 @media (min-width: 1920px) {
